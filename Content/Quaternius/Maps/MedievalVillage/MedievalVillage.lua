@@ -363,7 +363,7 @@ Quaternius = {
 				20000,					-- Bullet Speed (visual only)
 				Color(100, 58, 0),		-- Bullet Color
 				0.5,					-- Sight's FOV multiplier
-				Vector(-15, 0, -21),	-- Sight Location
+				Vector(-15, 0, -22),	-- Sight Location
 				Rotator(0, 0, 0),		-- Sight Rotation
 				Vector(25, -5, 12),		-- Left Hand Location
 				Rotator(0, 60, 160),	-- Left Hand Rotation
@@ -535,7 +535,7 @@ Quaternius = {
 				20000,					-- Bullet Speed (visual only)
 				Color(13, 100, 0),		-- Bullet Color
 				0.6,					-- Sight's FOV multiplier
-				Vector(0, 0, -11.5),		-- Sight Location
+				Vector(0, 0, -12),		-- Sight Location
 				Rotator(-0.5, 0, 0),	-- Sight Rotation
 				Vector(2, -1.5, 0),		-- Left Hand Location
 				Rotator(0, 50, 130),	-- Left Hand Rotation
@@ -578,7 +578,7 @@ Quaternius = {
 				20000,					-- Bullet Speed (visual only)
 				Color(13, 100, 0),		-- Bullet Color
 				0.6,					-- Sight's FOV multiplier
-				Vector(0, 0, -11.5),		-- Sight Location
+				Vector(0, 0, -12),		-- Sight Location
 				Rotator(-0.5, 0, 0),	-- Sight Rotation
 				Vector(2, -1.5, 0),		-- Left Hand Location
 				Rotator(0, 50, 130),	-- Left Hand Rotation
@@ -707,7 +707,7 @@ Quaternius = {
 				20000,					-- Bullet Speed (visual only)
 				Color(13, 100, 0),		-- Bullet Color
 				0.6,					-- Sight's FOV multiplier
-				Vector(0, 0, -11),		-- Sight Location
+				Vector(0, 0, -11.5),	-- Sight Location
 				Rotator(-0.5, 0, 0),	-- Sight Rotation
 				Vector(2, -1.5, 0),		-- Left Hand Location
 				Rotator(0, 50, 130),	-- Left Hand Rotation
@@ -750,7 +750,7 @@ Quaternius = {
 				20000,					-- Bullet Speed (visual only)
 				Color(13, 100, 0),		-- Bullet Color
 				0.6,					-- Sight's FOV multiplier
-				Vector(0, 0, -11.5),		-- Sight Location
+				Vector(0, 0, -12),		-- Sight Location
 				Rotator(-0.5, 0, 0),	-- Sight Rotation
 				Vector(2, -1.5, 0),		-- Left Hand Location
 				Rotator(0, 50, 130),	-- Left Hand Rotation
@@ -793,7 +793,7 @@ Quaternius = {
 				20000,					-- Bullet Speed (visual only)
 				Color(13, 100, 0),		-- Bullet Color
 				0.6,					-- Sight's FOV multiplier
-				Vector(0, 0, -11.5),		-- Sight Location
+				Vector(0, 0, -12),		-- Sight Location
 				Rotator(-0.5, 0, 0),	-- Sight Rotation
 				Vector(2, -1.5, 0),		-- Left Hand Location
 				Rotator(0, 50, 130),	-- Left Hand Rotation
@@ -922,7 +922,7 @@ Quaternius = {
 				20000,					-- Bullet Speed (visual only)
 				Color(13, 100, 0),		-- Bullet Color
 				0.6,					-- Sight's FOV multiplier
-				Vector(0, 0, -12),		-- Sight Location
+				Vector(0, 0, -13),		-- Sight Location
 				Rotator(-0.5, 0, 0),	-- Sight Rotation
 				Vector(2, -1.5, 0),		-- Left Hand Location
 				Rotator(0, 50, 130),	-- Left Hand Rotation
@@ -965,7 +965,7 @@ Quaternius = {
 				20000,					-- Bullet Speed (visual only)
 				Color(13, 100, 0),		-- Bullet Color
 				0.6,					-- Sight's FOV multiplier
-				Vector(0, 0, -14),		-- Sight Location
+				Vector(0, 0, -15),		-- Sight Location
 				Rotator(-0.5, 0, 0),	-- Sight Rotation
 				Vector(2, -1.5, 0),		-- Left Hand Location
 				Rotator(0, 50, 130),	-- Left Hand Rotation
@@ -1215,15 +1215,15 @@ Quaternius = {
 				6,						-- Ammo in the Clip
 				1000,					-- Ammo in the Bag
 				6,						-- Clip Capacity
-				20,						-- Base Damage
-				70,						-- Spread
+				30,						-- Base Damage
+				40,						-- Spread
 				6,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
 				1,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
 				10000,					-- Max Bullet Distance
 				15000,					-- Bullet Speed (visual only)
 				Color(100, 58, 0),		-- Bullet Color
 				0.75,					-- Sight's FOV multiplier
-				Vector(0, 0, -14),	-- Sight Location
+				Vector(0, 0, -15),		-- Sight Location
 				Rotator(-1, 0, 0),		-- Sight Rotation
 				Vector(35, 0, 6),		-- Left Hand Location
 				Rotator(0, 60, 90),		-- Left Hand Rotation
@@ -1258,8 +1258,8 @@ Quaternius = {
 				6,						-- Ammo in the Clip
 				1000,					-- Ammo in the Bag
 				6,						-- Clip Capacity
-				20,						-- Base Damage
-				70,						-- Spread
+				30,						-- Base Damage
+				40,						-- Spread
 				6,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
 				1,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
 				10000,					-- Max Bullet Distance
@@ -1802,46 +1802,46 @@ local spawn_locations = {
 	Vector(8182.000, -281.000, 189.170),
 }
 
-Quaternius.Weapons.AssaultRifle_01(Vector(3429.000, 403.000, 210.000), Rotator(0.000000, 0.000000, 90.000015))
-Quaternius.Weapons.AssaultRifle_02(Vector(3429.000, 468.000, 210.000), Rotator(0.000000, 0.000000, 90.000015))
-Quaternius.Weapons.AssaultRifle_03(Vector(3429.000, 543.000, 210.000), Rotator(0.000000, 0.000000, 90.000015))
-Quaternius.Weapons.AssaultRifle_04(Vector(3429.000, 616.000, 210.000), Rotator(0.000000, 0.000000, 90.000015))
-Quaternius.Weapons.AssaultRifle_05(Vector(3429.000, 689.000, 210.000), Rotator(0.000000, 0.000000, 90.000015))
-Quaternius.Weapons.AssaultRifle_06(Vector(3429.000, 758.000, 210.000), Rotator(0.000000, 0.000000, 90.000015))
-Quaternius.Weapons.AssaultRifle_07(Vector(2317.000, -135.000, 190.000), Rotator(0.000007, 89.999985, 90.000000))
-Quaternius.Weapons.AssaultRifle_08(Vector(1648.000, 428.000, 183.717), Rotator(0.000014, 89.999992, 90.000008))
-Quaternius.Weapons.AssaultRifle_09(Vector(1648.000, 534.000, 183.717), Rotator(0.000014, 89.999992, 90.000008))
-Quaternius.Weapons.Bullpup_01(Vector(1648.000, 642.000, 184.000), Rotator(0.000014, 89.999992, 90.000008))
-Quaternius.Weapons.Bullpup_02(Vector(1682.000, 1556.000, 171.971), Rotator(0.000041, -89.999939, 89.999962))
-Quaternius.Weapons.Bullpup_03(Vector(1682.000, 1446.000, 171.971), Rotator(0.000055, -89.999939, 89.999969))
-Quaternius.Weapons.P90(Vector(5193.000, 4720.000, 194.000), Rotator(-0.000061, -29.999760, -90.000000))
-Quaternius.Weapons.Pistol_01(Vector(5171.000, 4681.895, 194.000), Rotator(-0.000061, -29.999760, -90.000000))
-Quaternius.Weapons.Pistol_02(Vector(5151.000, 4647.254, 194.000), Rotator(-0.000061, -29.999760, -90.000000))
-Quaternius.Weapons.Pistol_03(Vector(5129.000, 4609.149, 194.000), Rotator(-0.000061, -29.999760, -90.000000))
-Quaternius.Weapons.Pistol_04(Vector(5109.000, 4574.508, 194.000), Rotator(-0.000061, -29.999760, -90.000000))
-Quaternius.Weapons.Pistol_05(Vector(5087.000, 4536.403, 194.000), Rotator(-0.000061, -29.999760, -90.000000))
-Quaternius.Weapons.Pistol_06(Vector(5067.001, 4501.762, 194.000), Rotator(-0.000061, -29.999760, -90.000000))
-Quaternius.Weapons.Revolver_01(Vector(2339.000, 2411.000, 180.000), Rotator(-0.000089, -89.999908, -90.000053))
-Quaternius.Weapons.Revolver_02(Vector(2295.000, 2411.000, 180.000), Rotator(-0.000089, -89.999908, -90.000053))
-Quaternius.Weapons.Revolver_03(Vector(2255.000, 2411.000, 180.000), Rotator(-0.000089, -89.999908, -90.000053))
-Quaternius.Weapons.Revolver_04(Vector(2211.000, 2411.000, 180.000), Rotator(-0.000089, -89.999908, -90.000053))
-Quaternius.Weapons.Revolver_05(Vector(2171.000, 2411.000, 180.000), Rotator(-0.000089, -89.999908, -90.000053))
-Quaternius.Weapons.Shotgun_01(Vector(2127.000, 2411.000, 180.000), Rotator(-0.000089, -89.999908, -90.000053))
-Quaternius.Weapons.Shotgun_02(Vector(2087.000, 2411.000, 180.000), Rotator(-0.000089, -89.999908, -90.000053))
-Quaternius.Weapons.Shotgun_03(Vector(-7872.000, 4804.000, 169.000), Rotator(0.000055, -89.999931, 89.999992))
-Quaternius.Weapons.Shotgun_04(Vector(-7830.000, 4804.000, 169.000), Rotator(0.000055, -89.999931, 89.999992))
-Quaternius.Weapons.Shotgun_05(Vector(-7784.000, 4804.000, 169.000), Rotator(0.000055, -89.999931, 89.999992))
-Quaternius.Weapons.Shotgun_SawedOff(Vector(-7741.000, 4804.000, 169.000), Rotator(0.000055, -89.999931, 89.999992))
-Quaternius.Weapons.SniperRifle_01(Vector(-7702.000, 4804.000, 169.000), Rotator(0.000055, -89.999931, 89.999992))
-Quaternius.Weapons.SniperRifle_02(Vector(-5580.000, -8871.000, 273.000), Rotator(0.000000, 0.000000, -90.000092))
-Quaternius.Weapons.SniperRifle_03(Vector(589.000, -12247.000, 167.000), Rotator(0.000000, 0.000000, 90.000114))
-Quaternius.Weapons.SniperRifle_04(Vector(419.000, -11974.000, 167.000), Rotator(0.000000, 0.000000, 90.000114))
-Quaternius.Weapons.SniperRifle_05(Vector(472.000, -11914.000, 167.000), Rotator(0.000000, 0.000000, 90.000114))
-Quaternius.Weapons.SubmachineGun_01(Vector(721.000, -12287.000, 167.000), Rotator(0.000000, 85.000015, 90.000122))
-Quaternius.Weapons.SubmachineGun_02(Vector(10436.000, 490.000, 200.000), Rotator(0.000000, 0.000000, 90.000015))
-Quaternius.Weapons.SubmachineGun_03(Vector(10536.000, 490.000, 200.000), Rotator(0.000000, 0.000000, 90.000015))
-Quaternius.Weapons.SubmachineGun_04(Vector(10636.000, 490.000, 200.000), Rotator(0.000000, 0.000000, 90.000015))
-Quaternius.Weapons.SubmachineGun_05(Vector(10736.000, 490.000, 200.000), Rotator(0.000000, 0.000000, 90.000015))
+Quaternius.Weapons.AssaultRifle_01(Vector(3469.000, 713.000, 190.000), Rotator(0.000007, -179.999924, 90.000015), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.AssaultRifle_02(Vector(3469.000, 668.000, 190.000), Rotator(0.000007, -179.999924, 90.000015), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.AssaultRifle_03(Vector(3469.000, 613.000, 190.000), Rotator(0.000007, -179.999924, 90.000015), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.AssaultRifle_04(Vector(3469.000, 560.000, 190.000), Rotator(0.000007, -179.999924, 90.000015), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.AssaultRifle_05(Vector(3469.000, 507.000, 190.000), Rotator(0.000007, -179.999924, 90.000015), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.AssaultRifle_06(Vector(3469.000, 458.000, 190.000), Rotator(0.000007, -179.999924, 90.000015), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.AssaultRifle_07(Vector(2317.000, -135.000, 190.000), Rotator(0.000007, 89.999985, 90.000000), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.AssaultRifle_08(Vector(1648.000, 428.000, 183.717), Rotator(0.000014, 89.999992, 90.000008), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.AssaultRifle_09(Vector(1648.000, 534.000, 183.717), Rotator(0.000014, 89.999992, 90.000008), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Bullpup_01(Vector(1648.000, 642.000, 184.000), Rotator(0.000014, 89.999992, 90.000008), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Bullpup_02(Vector(1682.000, 1556.000, 171.971), Rotator(0.000041, -89.999939, 89.999962), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Bullpup_03(Vector(1682.000, 1446.000, 171.971), Rotator(0.000055, -89.999939, 89.999969), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.P90(Vector(5103.000, 4460.000, 204.000), Rotator(-0.000061, 150.000381, -89.999878), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Pistol_01(Vector(5125.000, 4498.105, 204.000), Rotator(-0.000061, 150.000381, -89.999878), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Pistol_02(Vector(5145.000, 4532.746, 204.000), Rotator(-0.000061, 150.000381, -89.999878), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Pistol_03(Vector(5167.000, 4570.851, 204.000), Rotator(-0.000061, 150.000381, -89.999878), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Pistol_04(Vector(5187.000, 4605.492, 204.000), Rotator(-0.000061, 150.000381, -89.999878), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Pistol_05(Vector(5209.000, 4643.597, 204.000), Rotator(-0.000061, 150.000381, -89.999878), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Pistol_06(Vector(5228.998, 4678.239, 204.000), Rotator(-0.000061, 150.000381, -89.999878), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Revolver_01(Vector(2339.000, 2411.000, 190.000), Rotator(-0.000089, -89.999908, -90.000053), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Revolver_02(Vector(2295.000, 2411.000, 190.000), Rotator(-0.000089, -89.999908, -90.000053), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Revolver_03(Vector(2255.000, 2411.000, 190.000), Rotator(-0.000089, -89.999908, -90.000053), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Revolver_04(Vector(2211.000, 2411.000, 190.000), Rotator(-0.000089, -89.999908, -90.000053), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Revolver_05(Vector(2171.000, 2411.000, 190.000), Rotator(-0.000089, -89.999908, -90.000053), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Shotgun_01(Vector(2127.000, 2411.000, 190.000), Rotator(-0.000089, -89.999908, -90.000053), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Shotgun_02(Vector(2087.000, 2411.000, 190.000), Rotator(-0.000089, -89.999908, -90.000053), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Shotgun_03(Vector(-7682.000, 4753.999, 169.000), Rotator(0.000068, 89.999809, 89.999947), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Shotgun_04(Vector(-7724.000, 4754.000, 169.000), Rotator(0.000068, 89.999809, 89.999947), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Shotgun_05(Vector(-7770.000, 4754.000, 169.000), Rotator(0.000068, 89.999809, 89.999947), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.Shotgun_SawedOff(Vector(-7813.000, 4754.000, 169.000), Rotator(0.000068, 89.999809, 89.999947), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.SniperRifle_01(Vector(-7852.000, 4754.000, 169.000), Rotator(0.000068, 89.999809, 89.999947), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.SniperRifle_02(Vector(-5580.000, -8871.000, 273.000), Rotator(0.000000, 0.000000, -90.000092), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.SniperRifle_03(Vector(589.000, -12247.000, 167.000), Rotator(0.000000, 0.000000, 90.000114), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.SniperRifle_04(Vector(419.000, -11974.000, 167.000), Rotator(0.000000, 0.000000, 90.000114), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.SniperRifle_05(Vector(472.000, -11914.000, 167.000), Rotator(0.000000, 0.000000, 90.000114), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.SubmachineGun_01(Vector(721.000, -12287.000, 167.000), Rotator(0.000000, 85.000015, 90.000122), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.SubmachineGun_02(Vector(10436.000, 490.000, 117.000), Rotator(0.000000, 0.000000, 90.000015), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.SubmachineGun_03(Vector(10280.000, -6010.000, 131.000), Rotator(0.000000, 0.000000, -89.999992), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.SubmachineGun_04(Vector(10440.000, 260.000, 171.000), Rotator(0.000007, 59.999943, 89.999962), "Quaternius::ASSET_KEY")
+Quaternius.Weapons.SubmachineGun_05(Vector(-5120.000, 1850.000, 281.738), Rotator(69.999611, -59.999767, -89.999756), "Quaternius::ASSET_KEY")
 
 -- Calls a custom event "MapLoaded" with this map's spawn locations, which can be catched by the main script
 Events:Call("MapLoaded", {spawn_locations})
