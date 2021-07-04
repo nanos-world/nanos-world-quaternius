@@ -1843,5 +1843,7 @@ Quaternius.Weapons.SubmachineGun_03(Vector(10280.000, -6010.000, 131.000), Rotat
 Quaternius.Weapons.SubmachineGun_04(Vector(10440.000, 260.000, 171.000), Rotator(0.000007, 59.999943, 89.999962), "Quaternius::ASSET_KEY")
 Quaternius.Weapons.SubmachineGun_05(Vector(-5120.000, 1850.000, 281.738), Rotator(69.999611, -59.999767, -89.999756), "Quaternius::ASSET_KEY")
 
--- Calls a custom event "MapLoaded" with this map's spawn locations, which can be catched by the main script
-Events:Call("MapLoaded", {spawn_locations})
+Package.Subscribe("Load", function()
+	-- Calls a custom event "MapLoaded" with this map's spawn locations, which can be caught by the main script
+	Events.Call("MapLoaded", spawn_locations)
+end)
