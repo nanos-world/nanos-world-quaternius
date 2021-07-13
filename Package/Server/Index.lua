@@ -5,7 +5,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_AssaultRifle_01",	-- Model
+				"quaternius::SK_AssaultRifle_01",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				25,						-- Ammo in the Clip
@@ -28,18 +28,18 @@ Quaternius = {
 				0.09,					-- Cadence (1 shot at each 0.15seconds)
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",							-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_762x39",					-- Shells Particle
-				"NanosWorld::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"NanosWorld::A_Rifle_Load",								-- Weapon's Load Sound
-				"NanosWorld::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",								-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",									-- Weapon's Aiming Sound
-				"NanosWorld::A_AK74U_Shot",								-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"NanosWorld::SM_AP5_Mag_Empty",						-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
+				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
+				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
+				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
+				"nanos-world::A_AK74U_Shot",								-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
+				"nanos-world::SM_AP5_Mag_Empty",						-- Magazine Mesh
 				CrosshairType.Regular
 			)
 		end,
@@ -48,7 +48,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_AssaultRifle_02",	-- Model
+				"quaternius::SK_AssaultRifle_02",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				30,						-- Ammo in the Clip
@@ -71,18 +71,18 @@ Quaternius = {
 				0.09,					-- Cadence (1 shot at each 0.15seconds)
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",							-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_762x39",					-- Shells Particle
-				"NanosWorld::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"NanosWorld::A_Rifle_Load",								-- Weapon's Load Sound
-				"NanosWorld::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",								-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",									-- Weapon's Aiming Sound
-				"NanosWorld::A_AK74U_Shot",								-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"NanosWorld::SM_AK47_Mag_Empty",						-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
+				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
+				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
+				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
+				"nanos-world::A_AK74U_Shot",								-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
+				"nanos-world::SM_AK47_Mag_Empty",						-- Magazine Mesh
 				CrosshairType.Regular
 			)
 		end,
@@ -91,7 +91,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_AssaultRifle_03",	-- Model
+				"quaternius::SK_AssaultRifle_03",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				30,						-- Ammo in the Clip
@@ -114,18 +114,18 @@ Quaternius = {
 				0.1,					-- Cadence (1 shot at each 0.15seconds)
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",							-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_762x39",					-- Shells Particle
-				"NanosWorld::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"NanosWorld::A_Rifle_Load",								-- Weapon's Load Sound
-				"NanosWorld::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",								-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",									-- Weapon's Aiming Sound
-				"NanosWorld::A_AK47_Shot",								-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"NanosWorld::SM_AK47_Mag_Empty",						-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
+				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
+				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
+				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
+				"nanos-world::A_AK47_Shot",								-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
+				"nanos-world::SM_AK47_Mag_Empty",						-- Magazine Mesh
 				CrosshairType.Regular
 			)
 		end,
@@ -134,7 +134,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_AssaultRifle_04",	-- Model
+				"quaternius::SK_AssaultRifle_04",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				30,						-- Ammo in the Clip
@@ -157,18 +157,18 @@ Quaternius = {
 				0.1,					-- Cadence (1 shot at each 0.15seconds)
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",							-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_762x39",					-- Shells Particle
-				"NanosWorld::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"NanosWorld::A_Rifle_Load",								-- Weapon's Load Sound
-				"NanosWorld::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",								-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",									-- Weapon's Aiming Sound
-				"NanosWorld::A_AK47_Shot",								-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"NanosWorld::SM_AK47_Mag_Empty",						-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
+				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
+				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
+				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
+				"nanos-world::A_AK47_Shot",								-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
+				"nanos-world::SM_AK47_Mag_Empty",						-- Magazine Mesh
 				CrosshairType.Regular
 			)
 		end,
@@ -177,7 +177,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_AssaultRifle_05",	-- Model
+				"quaternius::SK_AssaultRifle_05",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				30,						-- Ammo in the Clip
@@ -200,18 +200,18 @@ Quaternius = {
 				0.1,					-- Cadence (1 shot at each 0.15seconds)
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",							-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_762x39",					-- Shells Particle
-				"NanosWorld::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"NanosWorld::A_Rifle_Load",								-- Weapon's Load Sound
-				"NanosWorld::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",								-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",									-- Weapon's Aiming Sound
-				"NanosWorld::A_AK47_Shot",								-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"NanosWorld::SM_AK47_Mag_Empty",						-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
+				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
+				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
+				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
+				"nanos-world::A_AK47_Shot",								-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
+				"nanos-world::SM_AK47_Mag_Empty",						-- Magazine Mesh
 				CrosshairType.Regular
 			)
 		end,
@@ -220,7 +220,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_AssaultRifle_06",	-- Model
+				"quaternius::SK_AssaultRifle_06",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				30,						-- Ammo in the Clip
@@ -243,18 +243,18 @@ Quaternius = {
 				0.1,					-- Cadence (1 shot at each 0.15seconds)
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",							-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_556x45",					-- Shells Particle
-				"NanosWorld::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"NanosWorld::A_Rifle_Load",								-- Weapon's Load Sound
-				"NanosWorld::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",								-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",									-- Weapon's Aiming Sound
-				"NanosWorld::A_AR15_A_Shot",								-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"NanosWorld::SM_AR4_Mag_Empty",						-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_556x45",					-- Shells Particle
+				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
+				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
+				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
+				"nanos-world::A_AR15_A_Shot",								-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
+				"nanos-world::SM_AR4_Mag_Empty",						-- Magazine Mesh
 				CrosshairType.Regular
 			)
 		end,
@@ -263,7 +263,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_AssaultRifle_07",	-- Model
+				"quaternius::SK_AssaultRifle_07",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				30,						-- Ammo in the Clip
@@ -286,18 +286,18 @@ Quaternius = {
 				0.1,					-- Cadence (1 shot at each 0.15seconds)
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",							-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_556x45",					-- Shells Particle
-				"NanosWorld::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"NanosWorld::A_Rifle_Load",								-- Weapon's Load Sound
-				"NanosWorld::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",								-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",									-- Weapon's Aiming Sound
-				"NanosWorld::A_AR15_B_Shot",								-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"NanosWorld::SM_AR4_Mag_Empty",						-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_556x45",					-- Shells Particle
+				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
+				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
+				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
+				"nanos-world::A_AR15_B_Shot",								-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
+				"nanos-world::SM_AR4_Mag_Empty",						-- Magazine Mesh
 				CrosshairType.Regular
 			)
 		end,
@@ -306,7 +306,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_AssaultRifle_08",	-- Model
+				"quaternius::SK_AssaultRifle_08",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				30,						-- Ammo in the Clip
@@ -329,18 +329,18 @@ Quaternius = {
 				0.09,					-- Cadence (1 shot at each 0.15seconds)
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",							-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_762x39",					-- Shells Particle
-				"NanosWorld::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"NanosWorld::A_Rifle_Load",								-- Weapon's Load Sound
-				"NanosWorld::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",								-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",									-- Weapon's Aiming Sound
-				"NanosWorld::A_AR15_A_Shot",								-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"NanosWorld::SM_AR4_Mag_Empty",						-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
+				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
+				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
+				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
+				"nanos-world::A_AR15_A_Shot",								-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
+				"nanos-world::SM_AR4_Mag_Empty",						-- Magazine Mesh
 				CrosshairType.Regular
 			)
 		end,
@@ -349,7 +349,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_AssaultRifle_09",	-- Model
+				"quaternius::SK_AssaultRifle_09",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				30,						-- Ammo in the Clip
@@ -372,18 +372,18 @@ Quaternius = {
 				0.09,					-- Cadence (1 shot at each 0.15seconds)
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",							-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_762x39",					-- Shells Particle
-				"NanosWorld::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"NanosWorld::A_Rifle_Load",								-- Weapon's Load Sound
-				"NanosWorld::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",								-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",									-- Weapon's Aiming Sound
-				"NanosWorld::A_AR15_B_Shot",								-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"NanosWorld::SM_AR4_Mag_Empty",						-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
+				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
+				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
+				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
+				"nanos-world::A_AR15_B_Shot",								-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
+				"nanos-world::SM_AR4_Mag_Empty",						-- Magazine Mesh
 				CrosshairType.Regular
 			)
 		end,
@@ -392,7 +392,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Bullpup_01",	-- Model
+				"quaternius::SK_Bullpup_01",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				30,						-- Ammo in the Clip
@@ -415,18 +415,18 @@ Quaternius = {
 				0.2,					-- Cadence (1 shot at each 0.15seconds)
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",							-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_762x39",					-- Shells Particle
-				"NanosWorld::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"NanosWorld::A_Rifle_Load",								-- Weapon's Load Sound
-				"NanosWorld::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",								-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",									-- Weapon's Aiming Sound
-				"NanosWorld::A_GunFire",								-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"NanosWorld::SM_AP5_Mag_Empty",						-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
+				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
+				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
+				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
+				"nanos-world::A_GunFire",								-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
+				"nanos-world::SM_AP5_Mag_Empty",						-- Magazine Mesh
 				CrosshairType.RegularX
 			)
 		end,
@@ -435,7 +435,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Bullpup_02",	-- Model
+				"quaternius::SK_Bullpup_02",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				30,						-- Ammo in the Clip
@@ -458,18 +458,18 @@ Quaternius = {
 				0.2,					-- Cadence (1 shot at each 0.15seconds)
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",							-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_762x39",					-- Shells Particle
-				"NanosWorld::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"NanosWorld::A_Rifle_Load",								-- Weapon's Load Sound
-				"NanosWorld::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",								-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",									-- Weapon's Aiming Sound
-				"NanosWorld::A_GunFire",								-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"NanosWorld::SM_AP5_Mag_Empty",						-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
+				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
+				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
+				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
+				"nanos-world::A_GunFire",								-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
+				"nanos-world::SM_AP5_Mag_Empty",						-- Magazine Mesh
 				CrosshairType.RegularX
 			)
 		end,
@@ -478,7 +478,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Bullpup_03",	-- Model
+				"quaternius::SK_Bullpup_03",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				30,						-- Ammo in the Clip
@@ -501,18 +501,18 @@ Quaternius = {
 				0.2,					-- Cadence (1 shot at each 0.15seconds)
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",							-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_762x39",					-- Shells Particle
-				"NanosWorld::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"NanosWorld::A_Rifle_Load",								-- Weapon's Load Sound
-				"NanosWorld::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",								-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",									-- Weapon's Aiming Sound
-				"NanosWorld::A_GunFire",								-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"NanosWorld::SM_AK47_Mag_Empty",						-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
+				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
+				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
+				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
+				"nanos-world::A_GunFire",								-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
+				"nanos-world::SM_AK47_Mag_Empty",						-- Magazine Mesh
 				CrosshairType.RegularX
 			)
 		end,
@@ -521,7 +521,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Pistol_01",	-- Model
+				"quaternius::SK_Pistol_01",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				9,						-- Ammo in the Clip
@@ -544,18 +544,18 @@ Quaternius = {
 				0.15,					-- Cadence
 				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",						-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",					-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_9mm",					-- Shells Particle
-				"NanosWorld::A_Pistol_Dry",							-- Weapon's Dry Sound
-				"NanosWorld::A_Pistol_Load",						-- Weapon's Load Sound
-				"NanosWorld::A_Pistol_Unload",						-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",							-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",								-- Weapon's Aiming Sound
-				"NanosWorld::A_P226_Shot",							-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Pistol",			-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",				-- Character's Aiming Animation
-				"NanosWorld::SM_Glock_Mag_Empty",					-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",						-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",					-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_9mm",					-- Shells Particle
+				"nanos-world::A_Pistol_Dry",							-- Weapon's Dry Sound
+				"nanos-world::A_Pistol_Load",						-- Weapon's Load Sound
+				"nanos-world::A_Pistol_Unload",						-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",							-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",								-- Weapon's Aiming Sound
+				"nanos-world::A_P226_Shot",							-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Pistol",			-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",				-- Character's Aiming Animation
+				"nanos-world::SM_Glock_Mag_Empty",					-- Magazine Mesh
 				CrosshairType.Circle
 			)
 		end,
@@ -564,7 +564,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Pistol_02",	-- Model
+				"quaternius::SK_Pistol_02",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				17,						-- Ammo in the Clip
@@ -587,18 +587,18 @@ Quaternius = {
 				0.15,					-- Cadence
 				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",						-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",					-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_9mm",					-- Shells Particle
-				"NanosWorld::A_Pistol_Dry",							-- Weapon's Dry Sound
-				"NanosWorld::A_Pistol_Load",						-- Weapon's Load Sound
-				"NanosWorld::A_Pistol_Unload",						-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",							-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",								-- Weapon's Aiming Sound
-				"NanosWorld::A_1911_Shot",							-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Pistol",			-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",				-- Character's Aiming Animation
-				"NanosWorld::SM_Glock_Mag_Empty",					-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",						-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",					-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_9mm",					-- Shells Particle
+				"nanos-world::A_Pistol_Dry",							-- Weapon's Dry Sound
+				"nanos-world::A_Pistol_Load",						-- Weapon's Load Sound
+				"nanos-world::A_Pistol_Unload",						-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",							-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",								-- Weapon's Aiming Sound
+				"nanos-world::A_1911_Shot",							-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Pistol",			-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",				-- Character's Aiming Animation
+				"nanos-world::SM_Glock_Mag_Empty",					-- Magazine Mesh
 				CrosshairType.Circle
 			)
 		end,
@@ -607,7 +607,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Pistol_03",	-- Model
+				"quaternius::SK_Pistol_03",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				17,						-- Ammo in the Clip
@@ -630,18 +630,18 @@ Quaternius = {
 				0.15,					-- Cadence
 				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",						-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",					-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_9mm",					-- Shells Particle
-				"NanosWorld::A_Pistol_Dry",							-- Weapon's Dry Sound
-				"NanosWorld::A_Pistol_Load",						-- Weapon's Load Sound
-				"NanosWorld::A_Pistol_Unload",						-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",							-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",								-- Weapon's Aiming Sound
-				"NanosWorld::A_BerretaM9_Shot",							-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Pistol",			-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",				-- Character's Aiming Animation
-				"NanosWorld::SM_Glock_Mag_Empty",					-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",						-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",					-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_9mm",					-- Shells Particle
+				"nanos-world::A_Pistol_Dry",							-- Weapon's Dry Sound
+				"nanos-world::A_Pistol_Load",						-- Weapon's Load Sound
+				"nanos-world::A_Pistol_Unload",						-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",							-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",								-- Weapon's Aiming Sound
+				"nanos-world::A_BerretaM9_Shot",							-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Pistol",			-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",				-- Character's Aiming Animation
+				"nanos-world::SM_Glock_Mag_Empty",					-- Magazine Mesh
 				CrosshairType.Circle
 			)
 		end,
@@ -650,7 +650,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Pistol_04",	-- Model
+				"quaternius::SK_Pistol_04",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				17,						-- Ammo in the Clip
@@ -673,18 +673,18 @@ Quaternius = {
 				0.15,					-- Cadence
 				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",						-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",					-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_9mm",					-- Shells Particle
-				"NanosWorld::A_Pistol_Dry",							-- Weapon's Dry Sound
-				"NanosWorld::A_Pistol_Load",						-- Weapon's Load Sound
-				"NanosWorld::A_Pistol_Unload",						-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",							-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",								-- Weapon's Aiming Sound
-				"NanosWorld::A_9MM_Shot",							-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Pistol",			-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",				-- Character's Aiming Animation
-				"NanosWorld::SM_Glock_Mag_Empty",					-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",						-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",					-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_9mm",					-- Shells Particle
+				"nanos-world::A_Pistol_Dry",							-- Weapon's Dry Sound
+				"nanos-world::A_Pistol_Load",						-- Weapon's Load Sound
+				"nanos-world::A_Pistol_Unload",						-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",							-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",								-- Weapon's Aiming Sound
+				"nanos-world::A_9MM_Shot",							-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Pistol",			-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",				-- Character's Aiming Animation
+				"nanos-world::SM_Glock_Mag_Empty",					-- Magazine Mesh
 				CrosshairType.Circle
 			)
 		end,
@@ -693,7 +693,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Pistol_05",	-- Model
+				"quaternius::SK_Pistol_05",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				17,						-- Ammo in the Clip
@@ -716,18 +716,18 @@ Quaternius = {
 				0.15,					-- Cadence
 				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",						-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",					-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_9mm",					-- Shells Particle
-				"NanosWorld::A_Pistol_Dry",							-- Weapon's Dry Sound
-				"NanosWorld::A_Pistol_Load",						-- Weapon's Load Sound
-				"NanosWorld::A_Pistol_Unload",						-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",							-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",								-- Weapon's Aiming Sound
-				"NanosWorld::A_P226_Shot",							-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Pistol",			-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",				-- Character's Aiming Animation
-				"NanosWorld::SM_Glock_Mag_Empty",					-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",						-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",					-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_9mm",					-- Shells Particle
+				"nanos-world::A_Pistol_Dry",							-- Weapon's Dry Sound
+				"nanos-world::A_Pistol_Load",						-- Weapon's Load Sound
+				"nanos-world::A_Pistol_Unload",						-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",							-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",								-- Weapon's Aiming Sound
+				"nanos-world::A_P226_Shot",							-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Pistol",			-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",				-- Character's Aiming Animation
+				"nanos-world::SM_Glock_Mag_Empty",					-- Magazine Mesh
 				CrosshairType.Circle
 			)
 		end,
@@ -736,7 +736,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Pistol_06",	-- Model
+				"quaternius::SK_Pistol_06",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				17,						-- Ammo in the Clip
@@ -759,18 +759,18 @@ Quaternius = {
 				0.15,					-- Cadence
 				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",						-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",					-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_9mm",					-- Shells Particle
-				"NanosWorld::A_Pistol_Dry",							-- Weapon's Dry Sound
-				"NanosWorld::A_Pistol_Load",						-- Weapon's Load Sound
-				"NanosWorld::A_Pistol_Unload",						-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",							-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",								-- Weapon's Aiming Sound
-				"NanosWorld::A_Glock_Shot",							-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Pistol",			-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",				-- Character's Aiming Animation
-				"NanosWorld::SM_Glock_Mag_Empty",					-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",						-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",					-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_9mm",					-- Shells Particle
+				"nanos-world::A_Pistol_Dry",							-- Weapon's Dry Sound
+				"nanos-world::A_Pistol_Load",						-- Weapon's Load Sound
+				"nanos-world::A_Pistol_Unload",						-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",							-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",								-- Weapon's Aiming Sound
+				"nanos-world::A_Glock_Shot",							-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Pistol",			-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",				-- Character's Aiming Animation
+				"nanos-world::SM_Glock_Mag_Empty",					-- Magazine Mesh
 				CrosshairType.Circle
 			)
 		end,
@@ -779,7 +779,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Revolver_01",	-- Model
+				"quaternius::SK_Revolver_01",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				6,						-- Ammo in the Clip
@@ -802,18 +802,18 @@ Quaternius = {
 				0.225,					-- Cadence
 				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",					-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_45ap",				-- Shells Particle
-				"NanosWorld::A_Pistol_Dry",						-- Weapon's Dry Sound
-				"NanosWorld::A_Pistol_Load",					-- Weapon's Load Sound
-				"NanosWorld::A_Pistol_Unload",					-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",						-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",							-- Weapon's Aiming Sound
-				"NanosWorld::A_DesertEagle_Shot",				-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Pistol",		-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"NanosWorld::SM_DesertEagle_Mag_Empty",			-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_45ap",				-- Shells Particle
+				"nanos-world::A_Pistol_Dry",						-- Weapon's Dry Sound
+				"nanos-world::A_Pistol_Load",					-- Weapon's Load Sound
+				"nanos-world::A_Pistol_Unload",					-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
+				"nanos-world::A_DesertEagle_Shot",				-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Pistol",		-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
+				"nanos-world::SM_DesertEagle_Mag_Empty",			-- Magazine Mesh
 				CrosshairType.Dot
 			)
 		end,
@@ -822,7 +822,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Revolver_02",	-- Model
+				"quaternius::SK_Revolver_02",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				6,						-- Ammo in the Clip
@@ -845,18 +845,18 @@ Quaternius = {
 				0.225,					-- Cadence
 				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",					-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_45ap",				-- Shells Particle
-				"NanosWorld::A_Pistol_Dry",						-- Weapon's Dry Sound
-				"NanosWorld::A_Pistol_Load",					-- Weapon's Load Sound
-				"NanosWorld::A_Pistol_Unload",					-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",						-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",							-- Weapon's Aiming Sound
-				"NanosWorld::A_DesertEagle_B_Shot",				-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Pistol",		-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"NanosWorld::SM_DesertEagle_Mag_Empty",			-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_45ap",				-- Shells Particle
+				"nanos-world::A_Pistol_Dry",						-- Weapon's Dry Sound
+				"nanos-world::A_Pistol_Load",					-- Weapon's Load Sound
+				"nanos-world::A_Pistol_Unload",					-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
+				"nanos-world::A_DesertEagle_B_Shot",				-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Pistol",		-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
+				"nanos-world::SM_DesertEagle_Mag_Empty",			-- Magazine Mesh
 				CrosshairType.Dot
 			)
 		end,
@@ -865,7 +865,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Revolver_03",	-- Model
+				"quaternius::SK_Revolver_03",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				6,						-- Ammo in the Clip
@@ -888,18 +888,18 @@ Quaternius = {
 				0.225,					-- Cadence
 				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",					-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_45ap",				-- Shells Particle
-				"NanosWorld::A_Pistol_Dry",						-- Weapon's Dry Sound
-				"NanosWorld::A_Pistol_Load",					-- Weapon's Load Sound
-				"NanosWorld::A_Pistol_Unload",					-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",						-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",							-- Weapon's Aiming Sound
-				"NanosWorld::A_DesertEagle_Shot",				-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Pistol",		-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"NanosWorld::SM_DesertEagle_Mag_Empty",			-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_45ap",				-- Shells Particle
+				"nanos-world::A_Pistol_Dry",						-- Weapon's Dry Sound
+				"nanos-world::A_Pistol_Load",					-- Weapon's Load Sound
+				"nanos-world::A_Pistol_Unload",					-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
+				"nanos-world::A_DesertEagle_Shot",				-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Pistol",		-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
+				"nanos-world::SM_DesertEagle_Mag_Empty",			-- Magazine Mesh
 				CrosshairType.Dot
 			)
 		end,
@@ -908,7 +908,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Revolver_04",	-- Model
+				"quaternius::SK_Revolver_04",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				6,						-- Ammo in the Clip
@@ -931,18 +931,18 @@ Quaternius = {
 				0.225,					-- Cadence
 				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",					-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_45ap",				-- Shells Particle
-				"NanosWorld::A_Pistol_Dry",						-- Weapon's Dry Sound
-				"NanosWorld::A_Pistol_Load",					-- Weapon's Load Sound
-				"NanosWorld::A_Pistol_Unload",					-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",						-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",							-- Weapon's Aiming Sound
-				"NanosWorld::A_DesertEagle_B_Shot",				-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Pistol",		-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"NanosWorld::SM_DesertEagle_Mag_Empty",			-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_45ap",				-- Shells Particle
+				"nanos-world::A_Pistol_Dry",						-- Weapon's Dry Sound
+				"nanos-world::A_Pistol_Load",					-- Weapon's Load Sound
+				"nanos-world::A_Pistol_Unload",					-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
+				"nanos-world::A_DesertEagle_B_Shot",				-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Pistol",		-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
+				"nanos-world::SM_DesertEagle_Mag_Empty",			-- Magazine Mesh
 				CrosshairType.Dot
 			)
 		end,
@@ -951,7 +951,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Revolver_05",	-- Model
+				"quaternius::SK_Revolver_05",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				6,						-- Ammo in the Clip
@@ -974,18 +974,18 @@ Quaternius = {
 				0.225,					-- Cadence
 				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",					-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_45ap",				-- Shells Particle
-				"NanosWorld::A_Pistol_Dry",						-- Weapon's Dry Sound
-				"NanosWorld::A_Pistol_Load",					-- Weapon's Load Sound
-				"NanosWorld::A_Pistol_Unload",					-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",						-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",							-- Weapon's Aiming Sound
-				"NanosWorld::A_DesertEagle_Shot",				-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Pistol",		-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"NanosWorld::SM_DesertEagle_Mag_Empty",			-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_45ap",				-- Shells Particle
+				"nanos-world::A_Pistol_Dry",						-- Weapon's Dry Sound
+				"nanos-world::A_Pistol_Load",					-- Weapon's Load Sound
+				"nanos-world::A_Pistol_Unload",					-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
+				"nanos-world::A_DesertEagle_Shot",				-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Pistol",		-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
+				"nanos-world::SM_DesertEagle_Mag_Empty",			-- Magazine Mesh
 				CrosshairType.Dot
 			)
 		end,
@@ -994,7 +994,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_SubmachineGun_01",	-- Model
+				"quaternius::SK_SubmachineGun_01",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				32,						-- Ammo in the Clip
@@ -1017,18 +1017,18 @@ Quaternius = {
 				0.075,					-- Cadence (1 shot at each 0.15seconds)
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",				-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",			-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_9x18",			-- Shells Particle
-				"NanosWorld::A_SMG_Dry",					-- Weapon's Dry Sound
-				"NanosWorld::A_SMG_Load",					-- Weapon's Load Sound
-				"NanosWorld::A_SMG_Unload",					-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",					-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",						-- Weapon's Aiming Sound
-				"NanosWorld::A_SMG_Shot",					-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Pistol",	-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",		-- Character's Aiming Animation
-				"NanosWorld::SM_AP5_Mag_Empty",				-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",				-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",			-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_9x18",			-- Shells Particle
+				"nanos-world::A_SMG_Dry",					-- Weapon's Dry Sound
+				"nanos-world::A_SMG_Load",					-- Weapon's Load Sound
+				"nanos-world::A_SMG_Unload",					-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",					-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",						-- Weapon's Aiming Sound
+				"nanos-world::A_SMG_Shot",					-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Pistol",	-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",		-- Character's Aiming Animation
+				"nanos-world::SM_AP5_Mag_Empty",				-- Magazine Mesh
 				CrosshairType.Submachine
 			)
 		end,
@@ -1037,7 +1037,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_SubmachineGun_02",	-- Model
+				"quaternius::SK_SubmachineGun_02",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				32,						-- Ammo in the Clip
@@ -1060,18 +1060,18 @@ Quaternius = {
 				0.075,					-- Cadence (1 shot at each 0.15seconds)
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",				-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",			-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_9x18",			-- Shells Particle
-				"NanosWorld::A_SMG_Dry",					-- Weapon's Dry Sound
-				"NanosWorld::A_SMG_Load",					-- Weapon's Load Sound
-				"NanosWorld::A_SMG_Unload",					-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",					-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",						-- Weapon's Aiming Sound
-				"NanosWorld::A_SMG_Shot",					-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Pistol",	-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",		-- Character's Aiming Animation
-				"NanosWorld::SM_AP5_Mag_Empty",				-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",				-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",			-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_9x18",			-- Shells Particle
+				"nanos-world::A_SMG_Dry",					-- Weapon's Dry Sound
+				"nanos-world::A_SMG_Load",					-- Weapon's Load Sound
+				"nanos-world::A_SMG_Unload",					-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",					-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",						-- Weapon's Aiming Sound
+				"nanos-world::A_SMG_Shot",					-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Pistol",	-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",		-- Character's Aiming Animation
+				"nanos-world::SM_AP5_Mag_Empty",				-- Magazine Mesh
 				CrosshairType.Submachine
 			)
 		end,
@@ -1080,7 +1080,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_SubmachineGun_03",	-- Model
+				"quaternius::SK_SubmachineGun_03",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				32,						-- Ammo in the Clip
@@ -1103,18 +1103,18 @@ Quaternius = {
 				0.075,					-- Cadence (1 shot at each 0.15seconds)
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",				-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",			-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_9x18",			-- Shells Particle
-				"NanosWorld::A_SMG_Dry",					-- Weapon's Dry Sound
-				"NanosWorld::A_SMG_Load",					-- Weapon's Load Sound
-				"NanosWorld::A_SMG_Unload",					-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",					-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",						-- Weapon's Aiming Sound
-				"NanosWorld::A_SMG_Shot",					-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Pistol",	-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",		-- Character's Aiming Animation
-				"NanosWorld::SM_AP5_Mag_Empty",				-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",				-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",			-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_9x18",			-- Shells Particle
+				"nanos-world::A_SMG_Dry",					-- Weapon's Dry Sound
+				"nanos-world::A_SMG_Load",					-- Weapon's Load Sound
+				"nanos-world::A_SMG_Unload",					-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",					-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",						-- Weapon's Aiming Sound
+				"nanos-world::A_SMG_Shot",					-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Pistol",	-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",		-- Character's Aiming Animation
+				"nanos-world::SM_AP5_Mag_Empty",				-- Magazine Mesh
 				CrosshairType.Submachine
 			)
 		end,
@@ -1123,7 +1123,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_SubmachineGun_04",	-- Model
+				"quaternius::SK_SubmachineGun_04",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				32,						-- Ammo in the Clip
@@ -1146,18 +1146,18 @@ Quaternius = {
 				0.075,					-- Cadence (1 shot at each 0.15seconds)
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",				-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",			-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_9x18",			-- Shells Particle
-				"NanosWorld::A_SMG_Dry",					-- Weapon's Dry Sound
-				"NanosWorld::A_SMG_Load",					-- Weapon's Load Sound
-				"NanosWorld::A_SMG_Unload",					-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",					-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",						-- Weapon's Aiming Sound
-				"NanosWorld::A_SMG_Shot",					-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Pistol",	-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",		-- Character's Aiming Animation
-				"NanosWorld::SM_AP5_Mag_Empty",				-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",				-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",			-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_9x18",			-- Shells Particle
+				"nanos-world::A_SMG_Dry",					-- Weapon's Dry Sound
+				"nanos-world::A_SMG_Load",					-- Weapon's Load Sound
+				"nanos-world::A_SMG_Unload",					-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",					-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",						-- Weapon's Aiming Sound
+				"nanos-world::A_SMG_Shot",					-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Pistol",	-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",		-- Character's Aiming Animation
+				"nanos-world::SM_AP5_Mag_Empty",				-- Magazine Mesh
 				CrosshairType.Submachine
 			)
 		end,
@@ -1166,7 +1166,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_SubmachineGun_05",	-- Model
+				"quaternius::SK_SubmachineGun_05",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				32,						-- Ammo in the Clip
@@ -1189,18 +1189,18 @@ Quaternius = {
 				0.075,					-- Cadence (1 shot at each 0.15seconds)
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",				-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",			-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_9x18",			-- Shells Particle
-				"NanosWorld::A_SMG_Dry",					-- Weapon's Dry Sound
-				"NanosWorld::A_SMG_Load",					-- Weapon's Load Sound
-				"NanosWorld::A_SMG_Unload",					-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",					-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",						-- Weapon's Aiming Sound
-				"NanosWorld::A_SMG_Shot",					-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Pistol",	-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",		-- Character's Aiming Animation
-				"NanosWorld::SM_AP5_Mag_Empty",				-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",				-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",			-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_9x18",			-- Shells Particle
+				"nanos-world::A_SMG_Dry",					-- Weapon's Dry Sound
+				"nanos-world::A_SMG_Load",					-- Weapon's Load Sound
+				"nanos-world::A_SMG_Unload",					-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",					-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",						-- Weapon's Aiming Sound
+				"nanos-world::A_SMG_Shot",					-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Pistol",	-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",		-- Character's Aiming Animation
+				"nanos-world::SM_AP5_Mag_Empty",				-- Magazine Mesh
 				CrosshairType.Submachine
 			)
 		end,
@@ -1209,7 +1209,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Shotgun_01",	-- Model
+				"quaternius::SK_Shotgun_01",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				6,						-- Ammo in the Clip
@@ -1232,17 +1232,17 @@ Quaternius = {
 				0.9,					-- Cadence
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",					-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_12Gauge",			-- Shells Particle
-				"NanosWorld::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"NanosWorld::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
+				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_12Gauge",			-- Shells Particle
+				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
+				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
 				"",												-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",						-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",							-- Weapon's Aiming Sound
-				"NanosWorld::A_Wesson500_Shot",					-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
+				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
+				"nanos-world::A_Wesson500_Shot",					-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
 				"",												-- Magazine Mesh
 				CrosshairType.Shotgun
 			)
@@ -1252,7 +1252,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Shotgun_02",	-- Model
+				"quaternius::SK_Shotgun_02",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				6,						-- Ammo in the Clip
@@ -1275,17 +1275,17 @@ Quaternius = {
 				0.9,					-- Cadence
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",					-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_12Gauge",			-- Shells Particle
-				"NanosWorld::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"NanosWorld::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
+				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_12Gauge",			-- Shells Particle
+				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
+				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
 				"",												-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",						-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",							-- Weapon's Aiming Sound
-				"NanosWorld::A_Wesson500_Shot",					-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
+				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
+				"nanos-world::A_Wesson500_Shot",					-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
 				"",												-- Magazine Mesh
 				CrosshairType.Shotgun
 			)
@@ -1295,7 +1295,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Shotgun_03",	-- Model
+				"quaternius::SK_Shotgun_03",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				6,						-- Ammo in the Clip
@@ -1318,17 +1318,17 @@ Quaternius = {
 				0.9,					-- Cadence
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",					-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_12Gauge",			-- Shells Particle
-				"NanosWorld::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"NanosWorld::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
+				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_12Gauge",			-- Shells Particle
+				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
+				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
 				"",												-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",						-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",							-- Weapon's Aiming Sound
-				"NanosWorld::A_Shotgun_Shot",					-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
+				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
+				"nanos-world::A_Shotgun_Shot",					-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
 				"",												-- Magazine Mesh
 				CrosshairType.Shotgun
 			)
@@ -1338,7 +1338,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Shotgun_04",	-- Model
+				"quaternius::SK_Shotgun_04",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				6,						-- Ammo in the Clip
@@ -1361,17 +1361,17 @@ Quaternius = {
 				0.5,					-- Cadence
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",					-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_12Gauge",			-- Shells Particle
-				"NanosWorld::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"NanosWorld::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
+				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_12Gauge",			-- Shells Particle
+				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
+				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
 				"",												-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",						-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",							-- Weapon's Aiming Sound
-				"NanosWorld::A_Wesson500_Shot",					-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",	-- Character's Aiming Animation
+				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
+				"nanos-world::A_Wesson500_Shot",					-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",	-- Character's Aiming Animation
 				"",												-- Magazine Mesh
 				CrosshairType.Crossbow 
 			)
@@ -1381,7 +1381,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Shotgun_05",	-- Model
+				"quaternius::SK_Shotgun_05",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				6,						-- Ammo in the Clip
@@ -1404,17 +1404,17 @@ Quaternius = {
 				0.9,					-- Cadence
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",					-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_12Gauge",			-- Shells Particle
-				"NanosWorld::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"NanosWorld::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
+				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_12Gauge",			-- Shells Particle
+				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
+				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
 				"",												-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",						-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",							-- Weapon's Aiming Sound
-				"NanosWorld::A_Shotgun_Shot",					-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
+				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
+				"nanos-world::A_Shotgun_Shot",					-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
 				"",												-- Magazine Mesh
 				CrosshairType.Shotgun
 			)
@@ -1424,7 +1424,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_Shotgun_SawedOff",	-- Model
+				"quaternius::SK_Shotgun_SawedOff",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				2,						-- Ammo in the Clip
@@ -1447,17 +1447,17 @@ Quaternius = {
 				0.1,					-- Cadence
 				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",					-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_12Gauge",			-- Shells Particle
-				"NanosWorld::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"NanosWorld::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
+				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_12Gauge",			-- Shells Particle
+				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
+				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
 				"",												-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",						-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",							-- Weapon's Aiming Sound
-				"NanosWorld::A_12Gauge_Shot",					-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
+				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
+				"nanos-world::A_12Gauge_Shot",					-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
 				"",												-- Magazine Mesh
 				CrosshairType.Shotgun
 			)
@@ -1467,7 +1467,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_SniperRifle_01",	-- Model
+				"quaternius::SK_SniperRifle_01",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				5,						-- Ammo in the Clip
@@ -1490,17 +1490,17 @@ Quaternius = {
 				2,						-- Cadence (1 shot at each 0.15seconds)
 				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",							-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_762x39",					-- Shells Particle
-				"NanosWorld::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"NanosWorld::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
+				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
+				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
+				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
 				"",							-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",								-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",									-- Weapon's Aiming Sound
-				"NanosWorld::A_SniperRifle_Shot",								-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
+				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
+				"nanos-world::A_SniperRifle_Shot",								-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
 				"",						-- Magazine Mesh
 				CrosshairType.None
 			)
@@ -1510,7 +1510,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_SniperRifle_02",	-- Model
+				"quaternius::SK_SniperRifle_02",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				5,						-- Ammo in the Clip
@@ -1533,17 +1533,17 @@ Quaternius = {
 				2,						-- Cadence (1 shot at each 0.15seconds)
 				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",							-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_762x39",					-- Shells Particle
-				"NanosWorld::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"NanosWorld::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
+				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
+				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
+				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
 				"",							-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",								-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",									-- Weapon's Aiming Sound
-				"NanosWorld::A_SniperRifle_Shot",								-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
+				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
+				"nanos-world::A_SniperRifle_Shot",								-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
 				"",						-- Magazine Mesh
 				CrosshairType.None
 			)
@@ -1553,7 +1553,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_SniperRifle_03",	-- Model
+				"quaternius::SK_SniperRifle_03",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				5,						-- Ammo in the Clip
@@ -1576,17 +1576,17 @@ Quaternius = {
 				2,						-- Cadence (1 shot at each 0.15seconds)
 				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",							-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_762x39",					-- Shells Particle
-				"NanosWorld::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"NanosWorld::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
+				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
+				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
+				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
 				"",							-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",								-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",									-- Weapon's Aiming Sound
-				"NanosWorld::A_SniperRifle_Shot",								-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
+				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
+				"nanos-world::A_SniperRifle_Shot",								-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
 				"",						-- Magazine Mesh
 				CrosshairType.None
 			)
@@ -1596,7 +1596,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_SniperRifle_04",	-- Model
+				"quaternius::SK_SniperRifle_04",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				5,						-- Ammo in the Clip
@@ -1619,17 +1619,17 @@ Quaternius = {
 				2,						-- Cadence (1 shot at each 0.15seconds)
 				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",							-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_762x39",					-- Shells Particle
-				"NanosWorld::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"NanosWorld::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
+				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
+				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
+				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
 				"",							-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",								-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",									-- Weapon's Aiming Sound
-				"NanosWorld::A_SniperRifle_Shot",								-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
+				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
+				"nanos-world::A_SniperRifle_Shot",								-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
 				"",						-- Magazine Mesh
 				CrosshairType.None
 			)
@@ -1639,7 +1639,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_SniperRifle_05",	-- Model
+				"quaternius::SK_SniperRifle_05",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				5,						-- Ammo in the Clip
@@ -1662,17 +1662,17 @@ Quaternius = {
 				2,						-- Cadence (1 shot at each 0.15seconds)
 				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",							-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_762x39",					-- Shells Particle
-				"NanosWorld::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"NanosWorld::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
+				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
+				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
+				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
 				"",							-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",								-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",									-- Weapon's Aiming Sound
-				"NanosWorld::A_SniperRifle_Shot",								-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
+				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
+				"nanos-world::A_SniperRifle_Shot",								-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
 				"",						-- Magazine Mesh
 				CrosshairType.None
 			)
@@ -1682,7 +1682,7 @@ Quaternius = {
 			return Weapon(
 				location or Vector(),
 				rotation or Rotator(),
-				"Quaternius::SK_P90",	-- Model
+				"quaternius::SK_P90",	-- Model
 				0,						-- Collision (Normal)
 				true,					-- Gravity Enabled
 				50,						-- Ammo in the Clip
@@ -1705,18 +1705,18 @@ Quaternius = {
 				0.05,					-- Cadence (1 shot at each 0.15seconds)
 				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
 				false,					-- Need to release to Fire (common to Bows)
-				"NanosWorld::P_Bullet_Trail",							-- Bullet Trail Particle
-				"NanosWorld::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"NanosWorld::P_Weapon_Shells_762x39",					-- Shells Particle
-				"NanosWorld::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"NanosWorld::A_Rifle_Load",								-- Weapon's Load Sound
-				"NanosWorld::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"NanosWorld::A_AimZoom",								-- Weapon's Zooming Sound
-				"NanosWorld::A_Rattle",									-- Weapon's Aiming Sound
-				"NanosWorld::A_P226_Shot",								-- Weapon's Shot Sound
-				"NanosWorld::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"NanosWorld::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"NanosWorld::SM_AK47_Mag_Empty",						-- Magazine Mesh
+				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
+				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
+				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
+				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
+				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
+				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
+				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
+				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
+				"nanos-world::A_P226_Shot",								-- Weapon's Shot Sound
+				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
+				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
+				"nanos-world::SM_AK47_Mag_Empty",						-- Magazine Mesh
 				CrosshairType.Submachine
 			)
 		end,
@@ -1776,52 +1776,52 @@ Package.Export("SpawnP90", Quaternius.Weapons.P90)
 Package.Subscribe("Load", function()
 	-- Adds all weapons to the Sandbox Spawn Menu
 	-- Parameters: asset_pack, category, id, package_name, package_function_name
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "AssaultRifle_01", "quaternius-tools", "SpawnAssaultRifle_01")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "AssaultRifle_02", "quaternius-tools", "SpawnAssaultRifle_02")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "AssaultRifle_03", "quaternius-tools", "SpawnAssaultRifle_03")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "AssaultRifle_04", "quaternius-tools", "SpawnAssaultRifle_04")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "AssaultRifle_05", "quaternius-tools", "SpawnAssaultRifle_05")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "AssaultRifle_06", "quaternius-tools", "SpawnAssaultRifle_06")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "AssaultRifle_07", "quaternius-tools", "SpawnAssaultRifle_07")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "AssaultRifle_08", "quaternius-tools", "SpawnAssaultRifle_08")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "AssaultRifle_09", "quaternius-tools", "SpawnAssaultRifle_09")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "AssaultRifle_01", "quaternius-tools", "SpawnAssaultRifle_01")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "AssaultRifle_02", "quaternius-tools", "SpawnAssaultRifle_02")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "AssaultRifle_03", "quaternius-tools", "SpawnAssaultRifle_03")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "AssaultRifle_04", "quaternius-tools", "SpawnAssaultRifle_04")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "AssaultRifle_05", "quaternius-tools", "SpawnAssaultRifle_05")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "AssaultRifle_06", "quaternius-tools", "SpawnAssaultRifle_06")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "AssaultRifle_07", "quaternius-tools", "SpawnAssaultRifle_07")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "AssaultRifle_08", "quaternius-tools", "SpawnAssaultRifle_08")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "AssaultRifle_09", "quaternius-tools", "SpawnAssaultRifle_09")
 
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Bullpup_01", "quaternius-tools", "SpawnBullpup_01")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Bullpup_02", "quaternius-tools", "SpawnBullpup_02")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Bullpup_03", "quaternius-tools", "SpawnBullpup_03")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Bullpup_01", "quaternius-tools", "SpawnBullpup_01")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Bullpup_02", "quaternius-tools", "SpawnBullpup_02")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Bullpup_03", "quaternius-tools", "SpawnBullpup_03")
 
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Pistol_01", "quaternius-tools", "SpawnPistol_01")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Pistol_02", "quaternius-tools", "SpawnPistol_02")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Pistol_03", "quaternius-tools", "SpawnPistol_03")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Pistol_04", "quaternius-tools", "SpawnPistol_04")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Pistol_05", "quaternius-tools", "SpawnPistol_05")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Pistol_06", "quaternius-tools", "SpawnPistol_06")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Pistol_01", "quaternius-tools", "SpawnPistol_01")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Pistol_02", "quaternius-tools", "SpawnPistol_02")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Pistol_03", "quaternius-tools", "SpawnPistol_03")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Pistol_04", "quaternius-tools", "SpawnPistol_04")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Pistol_05", "quaternius-tools", "SpawnPistol_05")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Pistol_06", "quaternius-tools", "SpawnPistol_06")
 
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Revolver_01", "quaternius-tools", "SpawnRevolver_01")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Revolver_02", "quaternius-tools", "SpawnRevolver_02")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Revolver_03", "quaternius-tools", "SpawnRevolver_03")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Revolver_04", "quaternius-tools", "SpawnRevolver_04")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Revolver_05", "quaternius-tools", "SpawnRevolver_05")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Revolver_01", "quaternius-tools", "SpawnRevolver_01")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Revolver_02", "quaternius-tools", "SpawnRevolver_02")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Revolver_03", "quaternius-tools", "SpawnRevolver_03")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Revolver_04", "quaternius-tools", "SpawnRevolver_04")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Revolver_05", "quaternius-tools", "SpawnRevolver_05")
 
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "SubmachineGun_01", "quaternius-tools", "SpawnSubmachineGun_01")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "SubmachineGun_02", "quaternius-tools", "SpawnSubmachineGun_02")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "SubmachineGun_03", "quaternius-tools", "SpawnSubmachineGun_03")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "SubmachineGun_04", "quaternius-tools", "SpawnSubmachineGun_04")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "SubmachineGun_05", "quaternius-tools", "SpawnSubmachineGun_05")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "SubmachineGun_01", "quaternius-tools", "SpawnSubmachineGun_01")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "SubmachineGun_02", "quaternius-tools", "SpawnSubmachineGun_02")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "SubmachineGun_03", "quaternius-tools", "SpawnSubmachineGun_03")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "SubmachineGun_04", "quaternius-tools", "SpawnSubmachineGun_04")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "SubmachineGun_05", "quaternius-tools", "SpawnSubmachineGun_05")
 
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Shotgun_01", "quaternius-tools", "SpawnShotgun_01")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Shotgun_02", "quaternius-tools", "SpawnShotgun_02")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Shotgun_03", "quaternius-tools", "SpawnShotgun_03")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Shotgun_04", "quaternius-tools", "SpawnShotgun_04")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Shotgun_05", "quaternius-tools", "SpawnShotgun_05")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Shotgun_01", "quaternius-tools", "SpawnShotgun_01")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Shotgun_02", "quaternius-tools", "SpawnShotgun_02")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Shotgun_03", "quaternius-tools", "SpawnShotgun_03")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Shotgun_04", "quaternius-tools", "SpawnShotgun_04")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Shotgun_05", "quaternius-tools", "SpawnShotgun_05")
 
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "Shotgun_SawedOff", "quaternius-tools", "SpawnShotgun_SawedOff")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "Shotgun_SawedOff", "quaternius-tools", "SpawnShotgun_SawedOff")
 
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "SniperRifle_01", "quaternius-tools", "SpawnSniperRifle_01")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "SniperRifle_02", "quaternius-tools", "SpawnSniperRifle_02")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "SniperRifle_03", "quaternius-tools", "SpawnSniperRifle_03")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "SniperRifle_04", "quaternius-tools", "SpawnSniperRifle_04")
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "SniperRifle_05", "quaternius-tools", "SpawnSniperRifle_05")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "SniperRifle_01", "quaternius-tools", "SpawnSniperRifle_01")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "SniperRifle_02", "quaternius-tools", "SpawnSniperRifle_02")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "SniperRifle_03", "quaternius-tools", "SpawnSniperRifle_03")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "SniperRifle_04", "quaternius-tools", "SpawnSniperRifle_04")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "SniperRifle_05", "quaternius-tools", "SpawnSniperRifle_05")
 
-	Package.Call("sandbox", "AddSpawnMenuItem", "Quaternius", "weapons", "P90", "quaternius-tools", "SpawnP90")
+	Package.Call("sandbox", "AddSpawnMenuItem", "quaternius", "weapons", "P90", "quaternius-tools", "SpawnP90")
 end)
