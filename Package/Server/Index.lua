@@ -2,1723 +2,1403 @@
 Quaternius = {
 	Weapons = {
 		AssaultRifle_01 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_AssaultRifle_01",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				25,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				25,						-- Clip Capacity
-				20,						-- Base Damage
-				40,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				25,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.75,					-- Sight's FOV multiplier
-				Vector(-5, 0, -17.5),	-- Sight Location
-				Rotator(-1, 0, 0),		-- Sight Rotation
-				Vector(30, 0, 8.5),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-6, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.09,					-- Cadence (1 shot at each 0.15seconds)
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
-				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
-				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
-				"nanos-world::A_AK74U_Shot",								-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"nanos-world::SM_AP5_Mag_Empty",						-- Magazine Mesh
-				CrosshairType.Regular
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_AssaultRifle_01")
+
+			weapon:SetAmmoSettings(25, 1000)
+			weapon:SetDamage(20)
+			weapon:SetSpread(40)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-5, 0, -17.5), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(30, 0, 8.5), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-6, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.09)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_762x39")
+
+			weapon:SetSoundDry("nanos-world::A_Rifle_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Rifle_Load")
+			weapon:SetSoundUnload("nanos-world::A_Rifle_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_AK74U_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Rifle")
+
+			weapon:SetMagazineMesh("nanos-world::SM_AP5_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Regular")
+
+			return weapon
 		end,
 
 		AssaultRifle_02 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_AssaultRifle_02",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				30,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				30,						-- Clip Capacity
-				30,						-- Base Damage
-				30,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				30,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.5,					-- Sight's FOV multiplier
-				Vector(-5, 0, -19),	-- Sight Location
-				Rotator(-1, 0, 0),		-- Sight Rotation
-				Vector(30, 0, 8.5),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-6, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.09,					-- Cadence (1 shot at each 0.15seconds)
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
-				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
-				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
-				"nanos-world::A_AK74U_Shot",								-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"nanos-world::SM_AK47_Mag_Empty",						-- Magazine Mesh
-				CrosshairType.Regular
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_AssaultRifle_02")
+
+			weapon:SetAmmoSettings(30, 1000)
+			weapon:SetDamage(30)
+			weapon:SetSpread(30)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-5, 0, -19), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(30, 0, 8.5), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-6, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.09)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_762x39")
+
+			weapon:SetSoundDry("nanos-world::A_Rifle_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Rifle_Load")
+			weapon:SetSoundUnload("nanos-world::A_Rifle_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_AK74U_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Rifle")
+
+			weapon:SetMagazineMesh("nanos-world::SM_AK47_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Regular")
+
+			return weapon
 		end,
 
 		AssaultRifle_03 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_AssaultRifle_03",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				30,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				30,						-- Clip Capacity
-				30,						-- Base Damage
-				30,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				30,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.5,					-- Sight's FOV multiplier
-				Vector(-5, 0, -19),	-- Sight Location
-				Rotator(-1, 0, 0),		-- Sight Rotation
-				Vector(30, 0, 8.5),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-6, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.1,					-- Cadence (1 shot at each 0.15seconds)
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
-				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
-				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
-				"nanos-world::A_AK47_Shot",								-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"nanos-world::SM_AK47_Mag_Empty",						-- Magazine Mesh
-				CrosshairType.Regular
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_AssaultRifle_03")
+
+			weapon:SetAmmoSettings(30, 1000)
+			weapon:SetDamage(30)
+			weapon:SetSpread(30)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-5, 0, -19), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(30, 0, 8.5), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-6, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.1)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_762x39")
+
+			weapon:SetSoundDry("nanos-world::A_Rifle_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Rifle_Load")
+			weapon:SetSoundUnload("nanos-world::A_Rifle_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_AK47_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Rifle")
+
+			weapon:SetMagazineMesh("nanos-world::SM_AK47_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Regular")
+
+			return weapon
 		end,
 
 		AssaultRifle_04 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_AssaultRifle_04",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				30,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				30,						-- Clip Capacity
-				30,						-- Base Damage
-				30,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				30,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.5,					-- Sight's FOV multiplier
-				Vector(-5, 0, -19),	-- Sight Location
-				Rotator(-1, 0, 0),		-- Sight Rotation
-				Vector(30, 0, 8.5),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-6, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.1,					-- Cadence (1 shot at each 0.15seconds)
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
-				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
-				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
-				"nanos-world::A_AK47_Shot",								-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"nanos-world::SM_AK47_Mag_Empty",						-- Magazine Mesh
-				CrosshairType.Regular
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_AssaultRifle_04")
+
+			weapon:SetAmmoSettings(30, 1000)
+			weapon:SetDamage(30)
+			weapon:SetSpread(30)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-5, 0, -19), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(30, 0, 8.5), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-6, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.1)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_762x39")
+
+			weapon:SetSoundDry("nanos-world::A_Rifle_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Rifle_Load")
+			weapon:SetSoundUnload("nanos-world::A_Rifle_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_AK47_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Rifle")
+
+			weapon:SetMagazineMesh("nanos-world::SM_AK47_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Regular")
+
+			return weapon
 		end,
 
 		AssaultRifle_05 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_AssaultRifle_05",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				30,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				30,						-- Clip Capacity
-				30,						-- Base Damage
-				30,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				30,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.5,					-- Sight's FOV multiplier
-				Vector(-5, 0, -19),	-- Sight Location
-				Rotator(-1, 0, 0),		-- Sight Rotation
-				Vector(30, 0, 8.5),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-6, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.1,					-- Cadence (1 shot at each 0.15seconds)
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
-				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
-				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
-				"nanos-world::A_AK47_Shot",								-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"nanos-world::SM_AK47_Mag_Empty",						-- Magazine Mesh
-				CrosshairType.Regular
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_AssaultRifle_05")
+
+			weapon:SetAmmoSettings(30, 1000)
+			weapon:SetDamage(30)
+			weapon:SetSpread(30)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-5, 0, -19), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(30, 0, 8.5), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-6, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.1)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_762x39")
+
+			weapon:SetSoundDry("nanos-world::A_Rifle_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Rifle_Load")
+			weapon:SetSoundUnload("nanos-world::A_Rifle_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_AK47_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Rifle")
+
+			weapon:SetMagazineMesh("nanos-world::SM_AK47_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Regular")
+
+			return weapon
 		end,
 
 		AssaultRifle_06 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_AssaultRifle_06",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				30,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				30,						-- Clip Capacity
-				30,						-- Base Damage
-				30,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				30,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.5,					-- Sight's FOV multiplier
-				Vector(-20, 0, -22),	-- Sight Location
-				Rotator(0, 0, 0),		-- Sight Rotation
-				Vector(30, 0, 10),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-6, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.1,					-- Cadence (1 shot at each 0.15seconds)
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_556x45",					-- Shells Particle
-				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
-				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
-				"nanos-world::A_AR15_A_Shot",								-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"nanos-world::SM_AR4_Mag_Empty",						-- Magazine Mesh
-				CrosshairType.Regular
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_AssaultRifle_06")
+
+			weapon:SetAmmoSettings(30, 1000)
+			weapon:SetDamage(30)
+			weapon:SetSpread(30)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-20, 0, -22), Rotator(0, 0, 0))
+			weapon:SetLeftHandTransform(Vector(30, 0, 10), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-6, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.1)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_556x45")
+
+			weapon:SetSoundDry("nanos-world::A_Rifle_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Rifle_Load")
+			weapon:SetSoundUnload("nanos-world::A_Rifle_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_AR15_A_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Rifle")
+
+			weapon:SetMagazineMesh("nanos-world::SM_AR4_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Regular")
+
+			return weapon
 		end,
 
 		AssaultRifle_07 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_AssaultRifle_07",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				30,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				30,						-- Clip Capacity
-				30,						-- Base Damage
-				30,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				30,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.5,					-- Sight's FOV multiplier
-				Vector(-20, 0, -22),	-- Sight Location
-				Rotator(0, 0, 0),		-- Sight Rotation
-				Vector(30, 0, 12),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-10, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.1,					-- Cadence (1 shot at each 0.15seconds)
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_556x45",					-- Shells Particle
-				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
-				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
-				"nanos-world::A_AR15_B_Shot",								-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"nanos-world::SM_AR4_Mag_Empty",						-- Magazine Mesh
-				CrosshairType.Regular
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_AssaultRifle_07")
+
+			weapon:SetAmmoSettings(30, 1000)
+			weapon:SetDamage(30)
+			weapon:SetSpread(30)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-20, 0, -22), Rotator(0, 0, 0))
+			weapon:SetLeftHandTransform(Vector(30, 0, 12), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-10, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.1)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_556x45")
+
+			weapon:SetSoundDry("nanos-world::A_Rifle_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Rifle_Load")
+			weapon:SetSoundUnload("nanos-world::A_Rifle_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_AR15_B_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Rifle")
+
+			weapon:SetMagazineMesh("nanos-world::SM_AR4_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Regular")
+
+			return weapon
 		end,
 
 		AssaultRifle_08 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_AssaultRifle_08",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				30,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				30,						-- Clip Capacity
-				30,						-- Base Damage
-				40,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				30,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.5,					-- Sight's FOV multiplier
-				Vector(-15, 0, -21),	-- Sight Location
-				Rotator(0, 0, 0),		-- Sight Rotation
-				Vector(30, 0, 12),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-10, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.09,					-- Cadence (1 shot at each 0.15seconds)
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
-				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
-				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
-				"nanos-world::A_AR15_A_Shot",								-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"nanos-world::SM_AR4_Mag_Empty",						-- Magazine Mesh
-				CrosshairType.Regular
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_AssaultRifle_08")
+
+			weapon:SetAmmoSettings(30, 1000)
+			weapon:SetDamage(30)
+			weapon:SetSpread(40)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-15, 0, -21), Rotator(0, 0, 0))
+			weapon:SetLeftHandTransform(Vector(30, 0, 12), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-10, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.09)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_762x39")
+
+			weapon:SetSoundDry("nanos-world::A_Rifle_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Rifle_Load")
+			weapon:SetSoundUnload("nanos-world::A_Rifle_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_AR15_A_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Rifle")
+
+			weapon:SetMagazineMesh("nanos-world::SM_AR4_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Regular")
+
+			return weapon
 		end,
 
 		AssaultRifle_09 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_AssaultRifle_09",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				30,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				30,						-- Clip Capacity
-				30,						-- Base Damage
-				40,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				30,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.5,					-- Sight's FOV multiplier
-				Vector(-15, 0, -22),	-- Sight Location
-				Rotator(0, 0, 0),		-- Sight Rotation
-				Vector(25, -5, 12),		-- Left Hand Location
-				Rotator(0, 60, 160),	-- Left Hand Rotation
-				Vector(-10, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.09,					-- Cadence (1 shot at each 0.15seconds)
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
-				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
-				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
-				"nanos-world::A_AR15_B_Shot",								-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"nanos-world::SM_AR4_Mag_Empty",						-- Magazine Mesh
-				CrosshairType.Regular
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_AssaultRifle_09")
+
+			weapon:SetAmmoSettings(30, 1000)
+			weapon:SetDamage(30)
+			weapon:SetSpread(40)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-15, 0, -22), Rotator(0, 0, 0))
+			weapon:SetLeftHandTransform(Vector(25, -5, 12), Rotator(0, 60, 160))
+			weapon:SetRightHandOffset(Vector(-10, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.09)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_762x39")
+
+			weapon:SetSoundDry("nanos-world::A_Rifle_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Rifle_Load")
+			weapon:SetSoundUnload("nanos-world::A_Rifle_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_AR15_B_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Rifle")
+
+			weapon:SetMagazineMesh("nanos-world::SM_AR4_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Regular")
+
+			return weapon
 		end,
 
 		Bullpup_01 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Bullpup_01",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				30,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				30,						-- Clip Capacity
-				40,						-- Base Damage
-				25,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				30,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.5,					-- Sight's FOV multiplier
-				Vector(-15, 0, -23),	-- Sight Location
-				Rotator(0, 0, 0),		-- Sight Rotation
-				Vector(20, 0, 12),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-15, 0, -5),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.2,					-- Cadence (1 shot at each 0.15seconds)
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
-				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
-				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
-				"nanos-world::A_GunFire",								-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"nanos-world::SM_AP5_Mag_Empty",						-- Magazine Mesh
-				CrosshairType.RegularX
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Bullpup_01")
+
+			weapon:SetAmmoSettings(30, 1000)
+			weapon:SetDamage(40)
+			weapon:SetSpread(25)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-15, 0, -23), Rotator(0, 0, 0))
+			weapon:SetLeftHandTransform(Vector(20, 0, 12), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-15, 0, -5))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.2)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_762x39")
+
+			weapon:SetSoundDry("nanos-world::A_Rifle_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Rifle_Load")
+			weapon:SetSoundUnload("nanos-world::A_Rifle_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_GunFire")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Rifle")
+
+			weapon:SetMagazineMesh("nanos-world::SM_AP5_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_RegularX")
+
+			return weapon
 		end,
 
 		Bullpup_02 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Bullpup_02",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				30,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				30,						-- Clip Capacity
-				40,						-- Base Damage
-				40,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				30,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.5,					-- Sight's FOV multiplier
-				Vector(-15, 0, -23),	-- Sight Location
-				Rotator(0, 0, 0),		-- Sight Rotation
-				Vector(20, 0, 10),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-15, 0, -5),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.2,					-- Cadence (1 shot at each 0.15seconds)
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
-				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
-				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
-				"nanos-world::A_GunFire",								-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"nanos-world::SM_AP5_Mag_Empty",						-- Magazine Mesh
-				CrosshairType.RegularX
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Bullpup_02")
+
+			weapon:SetAmmoSettings(30, 1000)
+			weapon:SetDamage(40)
+			weapon:SetSpread(40)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-15, 0, -23), Rotator(0, 0, 0))
+			weapon:SetLeftHandTransform(Vector(20, 0, 10), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-15, 0, -5))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.2)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_762x39")
+
+			weapon:SetSoundDry("nanos-world::A_Rifle_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Rifle_Load")
+			weapon:SetSoundUnload("nanos-world::A_Rifle_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_GunFire")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Rifle")
+
+			weapon:SetMagazineMesh("nanos-world::SM_AP5_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_RegularX")
+
+			return weapon
 		end,
 
 		Bullpup_03 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Bullpup_03",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				30,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				30,						-- Clip Capacity
-				40,						-- Base Damage
-				25,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				30,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.5,					-- Sight's FOV multiplier
-				Vector(-15, 0, -22),	-- Sight Location
-				Rotator(0, 0, 0),		-- Sight Rotation
-				Vector(23, 0, 10),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-15, 0, -5),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.2,					-- Cadence (1 shot at each 0.15seconds)
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
-				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
-				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
-				"nanos-world::A_GunFire",								-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"nanos-world::SM_AK47_Mag_Empty",						-- Magazine Mesh
-				CrosshairType.RegularX
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Bullpup_03")
+
+			weapon:SetAmmoSettings(30, 1000)
+			weapon:SetDamage(40)
+			weapon:SetSpread(25)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-15, 0, -22), Rotator(0, 0, 0))
+			weapon:SetLeftHandTransform(Vector(23, 0, 10), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-15, 0, -5))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.2)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_762x39")
+
+			weapon:SetSoundDry("nanos-world::A_Rifle_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Rifle_Load")
+			weapon:SetSoundUnload("nanos-world::A_Rifle_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_GunFire")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Rifle")
+
+			weapon:SetMagazineMesh("nanos-world::SM_AK47_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_RegularX")
+
+			return weapon
 		end,
 
 		Pistol_01 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Pistol_01",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				9,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				9,						-- Clip Capacity
-				15,						-- Base Damage
-				20,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				9,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(13, 100, 0),		-- Bullet Color
-				0.6,					-- Sight's FOV multiplier
-				Vector(0, 0, -12),		-- Sight Location
-				Rotator(-0.5, 0, 0),	-- Sight Rotation
-				Vector(2, -1.5, 0),		-- Left Hand Location
-				Rotator(0, 50, 130),	-- Left Hand Rotation
-				Vector(-30, 0, 5),		-- Right Hand Offset
-				HandlingMode.SingleHandedWeapon,
-				0.15,					-- Cadence
-				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",						-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",					-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_9mm",					-- Shells Particle
-				"nanos-world::A_Pistol_Dry",							-- Weapon's Dry Sound
-				"nanos-world::A_Pistol_Load",						-- Weapon's Load Sound
-				"nanos-world::A_Pistol_Unload",						-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",							-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",								-- Weapon's Aiming Sound
-				"nanos-world::A_P226_Shot",							-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Pistol",			-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",				-- Character's Aiming Animation
-				"nanos-world::SM_Glock_Mag_Empty",					-- Magazine Mesh
-				CrosshairType.Circle
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Pistol_01")
+
+			weapon:SetAmmoSettings(9, 1000)
+			weapon:SetDamage(15)
+			weapon:SetSpread(20)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(13, 100, 0))
+			weapon:SetSightTransform(Vector(0, 0, -12), Rotator(-0.5, 0, 0))
+			weapon:SetLeftHandTransform(Vector(2, -1.5, 0), Rotator(0, 50, 130))
+			weapon:SetRightHandOffset(Vector(-30, 0, 5))
+			weapon:SetHandlingMode(HandlingMode.SingleHandedWeapon)
+			weapon:SetCadence(0.15)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_9mm")
+
+			weapon:SetSoundDry("nanos-world::A_Pistol_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Pistol_Load")
+			weapon:SetSoundUnload("nanos-world::A_Pistol_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_P226_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Pistol")
+
+			weapon:SetMagazineMesh("nanos-world::SM_Glock_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Circle")
+
+			return weapon
 		end,
 
 		Pistol_02 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Pistol_02",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				17,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				17,						-- Clip Capacity
-				15,						-- Base Damage
-				20,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				17,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(13, 100, 0),		-- Bullet Color
-				0.6,					-- Sight's FOV multiplier
-				Vector(0, 0, -12),		-- Sight Location
-				Rotator(-0.5, 0, 0),	-- Sight Rotation
-				Vector(2, -1.5, 0),		-- Left Hand Location
-				Rotator(0, 50, 130),	-- Left Hand Rotation
-				Vector(-30, 0, 5),		-- Right Hand Offset
-				HandlingMode.SingleHandedWeapon,
-				0.15,					-- Cadence
-				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",						-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",					-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_9mm",					-- Shells Particle
-				"nanos-world::A_Pistol_Dry",							-- Weapon's Dry Sound
-				"nanos-world::A_Pistol_Load",						-- Weapon's Load Sound
-				"nanos-world::A_Pistol_Unload",						-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",							-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",								-- Weapon's Aiming Sound
-				"nanos-world::A_1911_Shot",							-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Pistol",			-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",				-- Character's Aiming Animation
-				"nanos-world::SM_Glock_Mag_Empty",					-- Magazine Mesh
-				CrosshairType.Circle
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Pistol_02")
+
+			weapon:SetAmmoSettings(17, 1000)
+			weapon:SetDamage(15)
+			weapon:SetSpread(20)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(13, 100, 0))
+			weapon:SetSightTransform(Vector(0, 0, -12), Rotator(-0.5, 0, 0))
+			weapon:SetLeftHandTransform(Vector(2, -1.5, 0), Rotator(0, 50, 130))
+			weapon:SetRightHandOffset(Vector(-30, 0, 5))
+			weapon:SetHandlingMode(HandlingMode.SingleHandedWeapon)
+			weapon:SetCadence(0.15)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_9mm")
+
+			weapon:SetSoundDry("nanos-world::A_Pistol_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Pistol_Load")
+			weapon:SetSoundUnload("nanos-world::A_Pistol_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_1911_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Pistol")
+
+			weapon:SetMagazineMesh("nanos-world::SM_Glock_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Circle")
+
+			return weapon
 		end,
 
 		Pistol_03 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Pistol_03",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				17,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				17,						-- Clip Capacity
-				15,						-- Base Damage
-				20,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				17,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(13, 100, 0),		-- Bullet Color
-				0.6,					-- Sight's FOV multiplier
-				Vector(0, 0, -13.5),		-- Sight Location
-				Rotator(-0.5, 0, 0),	-- Sight Rotation
-				Vector(2, -1.5, 0),		-- Left Hand Location
-				Rotator(0, 50, 130),	-- Left Hand Rotation
-				Vector(-30, 0, 5),		-- Right Hand Offset
-				HandlingMode.SingleHandedWeapon,
-				0.15,					-- Cadence
-				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",						-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",					-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_9mm",					-- Shells Particle
-				"nanos-world::A_Pistol_Dry",							-- Weapon's Dry Sound
-				"nanos-world::A_Pistol_Load",						-- Weapon's Load Sound
-				"nanos-world::A_Pistol_Unload",						-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",							-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",								-- Weapon's Aiming Sound
-				"nanos-world::A_BerretaM9_Shot",							-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Pistol",			-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",				-- Character's Aiming Animation
-				"nanos-world::SM_Glock_Mag_Empty",					-- Magazine Mesh
-				CrosshairType.Circle
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Pistol_03")
+
+			weapon:SetAmmoSettings(17, 1000)
+			weapon:SetDamage(15)
+			weapon:SetSpread(20)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(13, 100, 0))
+			weapon:SetSightTransform(Vector(0, 0, -13.5), Rotator(-0.5, 0, 0))
+			weapon:SetLeftHandTransform(Vector(2, -1.5, 0), Rotator(0, 50, 130))
+			weapon:SetRightHandOffset(Vector(-30, 0, 5))
+			weapon:SetHandlingMode(HandlingMode.SingleHandedWeapon)
+			weapon:SetCadence(0.15)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_9mm")
+
+			weapon:SetSoundDry("nanos-world::A_Pistol_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Pistol_Load")
+			weapon:SetSoundUnload("nanos-world::A_Pistol_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_BerretaM9_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Pistol")
+
+			weapon:SetMagazineMesh("nanos-world::SM_Glock_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Circle")
+
+			return weapon
 		end,
 
 		Pistol_04 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Pistol_04",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				17,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				17,						-- Clip Capacity
-				15,						-- Base Damage
-				20,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				17,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(13, 100, 0),		-- Bullet Color
-				0.6,					-- Sight's FOV multiplier
-				Vector(0, 0, -13.5),		-- Sight Location
-				Rotator(-0.5, 0, 0),	-- Sight Rotation
-				Vector(2, -1.5, 0),		-- Left Hand Location
-				Rotator(0, 50, 130),	-- Left Hand Rotation
-				Vector(-30, 0, 5),		-- Right Hand Offset
-				HandlingMode.SingleHandedWeapon,
-				0.15,					-- Cadence
-				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",						-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",					-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_9mm",					-- Shells Particle
-				"nanos-world::A_Pistol_Dry",							-- Weapon's Dry Sound
-				"nanos-world::A_Pistol_Load",						-- Weapon's Load Sound
-				"nanos-world::A_Pistol_Unload",						-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",							-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",								-- Weapon's Aiming Sound
-				"nanos-world::A_9MM_Shot",							-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Pistol",			-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",				-- Character's Aiming Animation
-				"nanos-world::SM_Glock_Mag_Empty",					-- Magazine Mesh
-				CrosshairType.Circle
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Pistol_04")
+
+			weapon:SetAmmoSettings(17, 1000)
+			weapon:SetDamage(15)
+			weapon:SetSpread(20)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(13, 100, 0))
+			weapon:SetSightTransform(Vector(0, 0, -13.5), Rotator(-0.5, 0, 0))
+			weapon:SetLeftHandTransform(Vector(2, -1.5, 0), Rotator(0, 50, 130))
+			weapon:SetRightHandOffset(Vector(-30, 0, 5))
+			weapon:SetHandlingMode(HandlingMode.SingleHandedWeapon)
+			weapon:SetCadence(0.15)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_9mm")
+
+			weapon:SetSoundDry("nanos-world::A_Pistol_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Pistol_Load")
+			weapon:SetSoundUnload("nanos-world::A_Pistol_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_9MM_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Pistol")
+
+			weapon:SetMagazineMesh("nanos-world::SM_Glock_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Circle")
+
+			return weapon
 		end,
 
 		Pistol_05 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Pistol_05",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				17,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				17,						-- Clip Capacity
-				15,						-- Base Damage
-				20,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				17,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(13, 100, 0),		-- Bullet Color
-				0.6,					-- Sight's FOV multiplier
-				Vector(0, 0, -11.5),	-- Sight Location
-				Rotator(-0.5, 0, 0),	-- Sight Rotation
-				Vector(2, -1.5, 0),		-- Left Hand Location
-				Rotator(0, 50, 130),	-- Left Hand Rotation
-				Vector(-30, 0, 5),		-- Right Hand Offset
-				HandlingMode.SingleHandedWeapon,
-				0.15,					-- Cadence
-				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",						-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",					-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_9mm",					-- Shells Particle
-				"nanos-world::A_Pistol_Dry",							-- Weapon's Dry Sound
-				"nanos-world::A_Pistol_Load",						-- Weapon's Load Sound
-				"nanos-world::A_Pistol_Unload",						-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",							-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",								-- Weapon's Aiming Sound
-				"nanos-world::A_P226_Shot",							-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Pistol",			-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",				-- Character's Aiming Animation
-				"nanos-world::SM_Glock_Mag_Empty",					-- Magazine Mesh
-				CrosshairType.Circle
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Pistol_05")
+
+			weapon:SetAmmoSettings(17, 1000)
+			weapon:SetDamage(15)
+			weapon:SetSpread(20)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(13, 100, 0))
+			weapon:SetSightTransform(Vector(0, 0, -11.5), Rotator(-0.5, 0, 0))
+			weapon:SetLeftHandTransform(Vector(2, -1.5, 0), Rotator(0, 50, 130))
+			weapon:SetRightHandOffset(Vector(-30, 0, 5))
+			weapon:SetHandlingMode(HandlingMode.SingleHandedWeapon)
+			weapon:SetCadence(0.15)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_9mm")
+
+			weapon:SetSoundDry("nanos-world::A_Pistol_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Pistol_Load")
+			weapon:SetSoundUnload("nanos-world::A_Pistol_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_P226_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Pistol")
+
+			weapon:SetMagazineMesh("nanos-world::SM_Glock_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Circle")
+
+			return weapon
 		end,
 
 		Pistol_06 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Pistol_06",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				17,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				17,						-- Clip Capacity
-				15,						-- Base Damage
-				20,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				17,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(13, 100, 0),		-- Bullet Color
-				0.6,					-- Sight's FOV multiplier
-				Vector(0, 0, -12),		-- Sight Location
-				Rotator(-0.5, 0, 0),	-- Sight Rotation
-				Vector(2, -1.5, 0),		-- Left Hand Location
-				Rotator(0, 50, 130),	-- Left Hand Rotation
-				Vector(-30, 0, 5),		-- Right Hand Offset
-				HandlingMode.SingleHandedWeapon,
-				0.15,					-- Cadence
-				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",						-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",					-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_9mm",					-- Shells Particle
-				"nanos-world::A_Pistol_Dry",							-- Weapon's Dry Sound
-				"nanos-world::A_Pistol_Load",						-- Weapon's Load Sound
-				"nanos-world::A_Pistol_Unload",						-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",							-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",								-- Weapon's Aiming Sound
-				"nanos-world::A_Glock_Shot",							-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Pistol",			-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",				-- Character's Aiming Animation
-				"nanos-world::SM_Glock_Mag_Empty",					-- Magazine Mesh
-				CrosshairType.Circle
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Pistol_06")
+
+			weapon:SetAmmoSettings(17, 1000)
+			weapon:SetDamage(15)
+			weapon:SetSpread(20)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(13, 100, 0))
+			weapon:SetSightTransform(Vector(0, 0, -12), Rotator(-0.5, 0, 0))
+			weapon:SetLeftHandTransform(Vector(2, -1.5, 0), Rotator(0, 50, 130))
+			weapon:SetRightHandOffset(Vector(-30, 0, 5))
+			weapon:SetHandlingMode(HandlingMode.SingleHandedWeapon)
+			weapon:SetCadence(0.15)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_9mm")
+
+			weapon:SetSoundDry("nanos-world::A_Pistol_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Pistol_Load")
+			weapon:SetSoundUnload("nanos-world::A_Pistol_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_Glock_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Pistol")
+
+			weapon:SetMagazineMesh("nanos-world::SM_Glock_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Circle")
+
+			return weapon
 		end,
 
 		Revolver_01 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Revolver_01",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				6,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				6,						-- Clip Capacity
-				40,						-- Base Damage
-				40,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				6,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(13, 100, 0),		-- Bullet Color
-				0.6,					-- Sight's FOV multiplier
-				Vector(0, 0, -12),		-- Sight Location
-				Rotator(-0.5, 0, 0),	-- Sight Rotation
-				Vector(2, -1.5, 0),		-- Left Hand Location
-				Rotator(0, 50, 130),	-- Left Hand Rotation
-				Vector(-30, 0, 5),		-- Right Hand Offset
-				HandlingMode.SingleHandedWeapon,
-				0.225,					-- Cadence
-				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_45ap",				-- Shells Particle
-				"nanos-world::A_Pistol_Dry",						-- Weapon's Dry Sound
-				"nanos-world::A_Pistol_Load",					-- Weapon's Load Sound
-				"nanos-world::A_Pistol_Unload",					-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
-				"nanos-world::A_DesertEagle_Shot",				-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Pistol",		-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"nanos-world::SM_DesertEagle_Mag_Empty",			-- Magazine Mesh
-				CrosshairType.Dot
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Revolver_01")
+
+			weapon:SetAmmoSettings(6, 1000)
+			weapon:SetDamage(40)
+			weapon:SetSpread(40)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(13, 100, 0))
+			weapon:SetSightTransform(Vector(0, 0, -12), Rotator(-0.5, 0, 0))
+			weapon:SetLeftHandTransform(Vector(2, -1.5, 0), Rotator(0, 50, 130))
+			weapon:SetRightHandOffset(Vector(-30, 0, 5))
+			weapon:SetHandlingMode(HandlingMode.SingleHandedWeapon)
+			weapon:SetCadence(0.225)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_45ap")
+
+			weapon:SetSoundDry("nanos-world::A_Pistol_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Pistol_Load")
+			weapon:SetSoundUnload("nanos-world::A_Pistol_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_DesertEagle_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire_Heavy")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Pistol")
+
+			weapon:SetMagazineMesh("nanos-world::SM_DesertEagle_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Dot")
+
+			return weapon
 		end,
 
 		Revolver_02 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Revolver_02",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				6,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				6,						-- Clip Capacity
-				40,						-- Base Damage
-				40,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				6,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(13, 100, 0),		-- Bullet Color
-				0.6,					-- Sight's FOV multiplier
-				Vector(0, 0, -14),		-- Sight Location
-				Rotator(-0.5, 0, 0),	-- Sight Rotation
-				Vector(2, -1.5, 0),		-- Left Hand Location
-				Rotator(0, 50, 130),	-- Left Hand Rotation
-				Vector(-30, 0, 5),		-- Right Hand Offset
-				HandlingMode.SingleHandedWeapon,
-				0.225,					-- Cadence
-				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_45ap",				-- Shells Particle
-				"nanos-world::A_Pistol_Dry",						-- Weapon's Dry Sound
-				"nanos-world::A_Pistol_Load",					-- Weapon's Load Sound
-				"nanos-world::A_Pistol_Unload",					-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
-				"nanos-world::A_DesertEagle_B_Shot",				-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Pistol",		-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"nanos-world::SM_DesertEagle_Mag_Empty",			-- Magazine Mesh
-				CrosshairType.Dot
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Revolver_02")
+
+			weapon:SetAmmoSettings(6, 1000)
+			weapon:SetDamage(40)
+			weapon:SetSpread(40)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(13, 100, 0))
+			weapon:SetSightTransform(Vector(0, 0, -14), Rotator(-0.5, 0, 0))
+			weapon:SetLeftHandTransform(Vector(2, -1.5, 0), Rotator(0, 50, 130))
+			weapon:SetRightHandOffset(Vector(-30, 0, 5))
+			weapon:SetHandlingMode(HandlingMode.SingleHandedWeapon)
+			weapon:SetCadence(0.225)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_45ap")
+
+			weapon:SetSoundDry("nanos-world::A_Pistol_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Pistol_Load")
+			weapon:SetSoundUnload("nanos-world::A_Pistol_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_DesertEagle_B_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire_Heavy")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Pistol")
+
+			weapon:SetMagazineMesh("nanos-world::SM_DesertEagle_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Dot")
+
+			return weapon
 		end,
 
 		Revolver_03 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Revolver_03",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				6,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				6,						-- Clip Capacity
-				40,						-- Base Damage
-				40,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				6,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(13, 100, 0),		-- Bullet Color
-				0.6,					-- Sight's FOV multiplier
-				Vector(0, 0, -14),		-- Sight Location
-				Rotator(-0.5, 0, 0),	-- Sight Rotation
-				Vector(2, -1.5, 0),		-- Left Hand Location
-				Rotator(0, 50, 130),	-- Left Hand Rotation
-				Vector(-30, 0, 5),		-- Right Hand Offset
-				HandlingMode.SingleHandedWeapon,
-				0.225,					-- Cadence
-				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_45ap",				-- Shells Particle
-				"nanos-world::A_Pistol_Dry",						-- Weapon's Dry Sound
-				"nanos-world::A_Pistol_Load",					-- Weapon's Load Sound
-				"nanos-world::A_Pistol_Unload",					-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
-				"nanos-world::A_DesertEagle_Shot",				-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Pistol",		-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"nanos-world::SM_DesertEagle_Mag_Empty",			-- Magazine Mesh
-				CrosshairType.Dot
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Revolver_03")
+
+			weapon:SetAmmoSettings(6, 1000)
+			weapon:SetDamage(40)
+			weapon:SetSpread(40)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(13, 100, 0))
+			weapon:SetSightTransform(Vector(0, 0, -14), Rotator(-0.5, 0, 0))
+			weapon:SetLeftHandTransform(Vector(2, -1.5, 0), Rotator(0, 50, 130))
+			weapon:SetRightHandOffset(Vector(-30, 0, 5))
+			weapon:SetHandlingMode(HandlingMode.SingleHandedWeapon)
+			weapon:SetCadence(0.225)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_45ap")
+
+			weapon:SetSoundDry("nanos-world::A_Pistol_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Pistol_Load")
+			weapon:SetSoundUnload("nanos-world::A_Pistol_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_DesertEagle_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire_Heavy")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Pistol")
+
+			weapon:SetMagazineMesh("nanos-world::SM_DesertEagle_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Dot")
+
+			return weapon
 		end,
 
 		Revolver_04 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Revolver_04",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				6,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				6,						-- Clip Capacity
-				40,						-- Base Damage
-				40,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				6,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(13, 100, 0),		-- Bullet Color
-				0.6,					-- Sight's FOV multiplier
-				Vector(0, 0, -13),		-- Sight Location
-				Rotator(-0.5, 0, 0),	-- Sight Rotation
-				Vector(2, -1.5, 0),		-- Left Hand Location
-				Rotator(0, 50, 130),	-- Left Hand Rotation
-				Vector(-30, 0, 5),		-- Right Hand Offset
-				HandlingMode.SingleHandedWeapon,
-				0.225,					-- Cadence
-				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_45ap",				-- Shells Particle
-				"nanos-world::A_Pistol_Dry",						-- Weapon's Dry Sound
-				"nanos-world::A_Pistol_Load",					-- Weapon's Load Sound
-				"nanos-world::A_Pistol_Unload",					-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
-				"nanos-world::A_DesertEagle_B_Shot",				-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Pistol",		-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"nanos-world::SM_DesertEagle_Mag_Empty",			-- Magazine Mesh
-				CrosshairType.Dot
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Revolver_04")
+
+			weapon:SetAmmoSettings(6, 1000)
+			weapon:SetDamage(40)
+			weapon:SetSpread(40)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(13, 100, 0))
+			weapon:SetSightTransform(Vector(0, 0, -13), Rotator(-0.5, 0, 0))
+			weapon:SetLeftHandTransform(Vector(2, -1.5, 0), Rotator(0, 50, 130))
+			weapon:SetRightHandOffset(Vector(-30, 0, 5))
+			weapon:SetHandlingMode(HandlingMode.SingleHandedWeapon)
+			weapon:SetCadence(0.225)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_45ap")
+
+			weapon:SetSoundDry("nanos-world::A_Pistol_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Pistol_Load")
+			weapon:SetSoundUnload("nanos-world::A_Pistol_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_DesertEagle_B_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire_Heavy")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Pistol")
+
+			weapon:SetMagazineMesh("nanos-world::SM_DesertEagle_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Dot")
+
+			return weapon
 		end,
 
 		Revolver_05 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Revolver_05",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				6,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				6,						-- Clip Capacity
-				40,						-- Base Damage
-				40,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				6,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(13, 100, 0),		-- Bullet Color
-				0.6,					-- Sight's FOV multiplier
-				Vector(0, 0, -15),		-- Sight Location
-				Rotator(-0.5, 0, 0),	-- Sight Rotation
-				Vector(2, -1.5, 0),		-- Left Hand Location
-				Rotator(0, 50, 130),	-- Left Hand Rotation
-				Vector(-30, 0, 5),		-- Right Hand Offset
-				HandlingMode.SingleHandedWeapon,
-				0.225,					-- Cadence
-				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_45ap",				-- Shells Particle
-				"nanos-world::A_Pistol_Dry",						-- Weapon's Dry Sound
-				"nanos-world::A_Pistol_Load",					-- Weapon's Load Sound
-				"nanos-world::A_Pistol_Unload",					-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
-				"nanos-world::A_DesertEagle_Shot",				-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Pistol",		-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"nanos-world::SM_DesertEagle_Mag_Empty",			-- Magazine Mesh
-				CrosshairType.Dot
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Revolver_05")
+
+			weapon:SetAmmoSettings(6, 1000)
+			weapon:SetDamage(40)
+			weapon:SetSpread(40)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(13, 100, 0))
+			weapon:SetSightTransform(Vector(0, 0, -15), Rotator(-0.5, 0, 0))
+			weapon:SetLeftHandTransform(Vector(2, -1.5, 0), Rotator(0, 50, 130))
+			weapon:SetRightHandOffset(Vector(-30, 0, 5))
+			weapon:SetHandlingMode(HandlingMode.SingleHandedWeapon)
+			weapon:SetCadence(0.225)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_45ap")
+
+			weapon:SetSoundDry("nanos-world::A_Pistol_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Pistol_Load")
+			weapon:SetSoundUnload("nanos-world::A_Pistol_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_DesertEagle_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire_Heavy")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Pistol")
+
+			weapon:SetMagazineMesh("nanos-world::SM_DesertEagle_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Dot")
+
+			return weapon
 		end,
 
 		SubmachineGun_01 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_SubmachineGun_01",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				32,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				32,						-- Clip Capacity
-				15,						-- Base Damage
-				35,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				32,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.55,					-- Sight's FOV multiplier
-				Vector(-15, 0, -15),	-- Sight Location
-				Rotator(0, 0, 0),		-- Sight Rotation
-				Vector(23, 0, 5),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-15, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.075,					-- Cadence (1 shot at each 0.15seconds)
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",				-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",			-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_9x18",			-- Shells Particle
-				"nanos-world::A_SMG_Dry",					-- Weapon's Dry Sound
-				"nanos-world::A_SMG_Load",					-- Weapon's Load Sound
-				"nanos-world::A_SMG_Unload",					-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",					-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",						-- Weapon's Aiming Sound
-				"nanos-world::A_SMG_Shot",					-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Pistol",	-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",		-- Character's Aiming Animation
-				"nanos-world::SM_AP5_Mag_Empty",				-- Magazine Mesh
-				CrosshairType.Submachine
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_SubmachineGun_01")
+
+			weapon:SetAmmoSettings(32, 1000)
+			weapon:SetDamage(15)
+			weapon:SetSpread(35)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-15, 0, -15), Rotator(0, 0, 0))
+			weapon:SetLeftHandTransform(Vector(23, 0, 5), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-15, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.075)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_9x18")
+
+			weapon:SetSoundDry("nanos-world::A_SMG_Dry")
+			weapon:SetSoundLoad("nanos-world::A_SMG_Load")
+			weapon:SetSoundUnload("nanos-world::A_SMG_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_SMG_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Pistol")
+
+			weapon:SetMagazineMesh("nanos-world::SM_AP5_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Submachine")
+
+			return weapon
 		end,
 
 		SubmachineGun_02 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_SubmachineGun_02",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				32,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				32,						-- Clip Capacity
-				15,						-- Base Damage
-				35,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				32,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.55,					-- Sight's FOV multiplier
-				Vector(0, 0, -16),	-- Sight Location
-				Rotator(-1, 0, 0),	-- Sight Rotation
-				Vector(-3, 0, 0),		-- Left Hand Location
-				Rotator(0, 25, 157.5),	-- Left Hand Rotation
-				Vector(-25, 0, 0),		-- Right Hand Offset
-				HandlingMode.SingleHandedWeapon,
-				0.075,					-- Cadence (1 shot at each 0.15seconds)
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",				-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",			-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_9x18",			-- Shells Particle
-				"nanos-world::A_SMG_Dry",					-- Weapon's Dry Sound
-				"nanos-world::A_SMG_Load",					-- Weapon's Load Sound
-				"nanos-world::A_SMG_Unload",					-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",					-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",						-- Weapon's Aiming Sound
-				"nanos-world::A_SMG_Shot",					-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Pistol",	-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",		-- Character's Aiming Animation
-				"nanos-world::SM_AP5_Mag_Empty",				-- Magazine Mesh
-				CrosshairType.Submachine
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_SubmachineGun_02")
+
+			weapon:SetAmmoSettings(32, 1000)
+			weapon:SetDamage(15)
+			weapon:SetSpread(35)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(0, 0, -16), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(-3, 0, 0), Rotator(0, 25, 157.5))
+			weapon:SetRightHandOffset(Vector(-25, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.SingleHandedWeapon)
+			weapon:SetCadence(0.075)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_9x18")
+
+			weapon:SetSoundDry("nanos-world::A_SMG_Dry")
+			weapon:SetSoundLoad("nanos-world::A_SMG_Load")
+			weapon:SetSoundUnload("nanos-world::A_SMG_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_SMG_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Pistol")
+
+			weapon:SetMagazineMesh("nanos-world::SM_AP5_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Submachine")
+
+			return weapon
 		end,
 
 		SubmachineGun_03 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_SubmachineGun_03",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				32,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				32,						-- Clip Capacity
-				15,						-- Base Damage
-				35,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				32,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.55,					-- Sight's FOV multiplier
-				Vector(-5, 0, -15),	-- Sight Location
-				Rotator(-1, 0, 0),	-- Sight Rotation
-				Vector(22, 0, 6),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-15, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.075,					-- Cadence (1 shot at each 0.15seconds)
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",				-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",			-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_9x18",			-- Shells Particle
-				"nanos-world::A_SMG_Dry",					-- Weapon's Dry Sound
-				"nanos-world::A_SMG_Load",					-- Weapon's Load Sound
-				"nanos-world::A_SMG_Unload",					-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",					-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",						-- Weapon's Aiming Sound
-				"nanos-world::A_SMG_Shot",					-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Pistol",	-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",		-- Character's Aiming Animation
-				"nanos-world::SM_AP5_Mag_Empty",				-- Magazine Mesh
-				CrosshairType.Submachine
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_SubmachineGun_03")
+
+			weapon:SetAmmoSettings(32, 1000)
+			weapon:SetDamage(15)
+			weapon:SetSpread(35)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-5, 0, -15), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(22, 0, 6), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-15, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.075)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_9x18")
+
+			weapon:SetSoundDry("nanos-world::A_SMG_Dry")
+			weapon:SetSoundLoad("nanos-world::A_SMG_Load")
+			weapon:SetSoundUnload("nanos-world::A_SMG_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_SMG_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Pistol")
+
+			weapon:SetMagazineMesh("nanos-world::SM_AP5_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Submachine")
+
+			return weapon
 		end,
 
 		SubmachineGun_04 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_SubmachineGun_04",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				32,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				32,						-- Clip Capacity
-				15,						-- Base Damage
-				35,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				32,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.55,					-- Sight's FOV multiplier
-				Vector(-5, 0, -13),	-- Sight Location
-				Rotator(-1, 0, 0),	-- Sight Rotation
-				Vector(-3, 0, 0),		-- Left Hand Location
-				Rotator(0, 25, 157.5),	-- Left Hand Rotation
-				Vector(-25, 0, 0),		-- Right Hand Offset
-				HandlingMode.SingleHandedWeapon,
-				0.075,					-- Cadence (1 shot at each 0.15seconds)
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",				-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",			-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_9x18",			-- Shells Particle
-				"nanos-world::A_SMG_Dry",					-- Weapon's Dry Sound
-				"nanos-world::A_SMG_Load",					-- Weapon's Load Sound
-				"nanos-world::A_SMG_Unload",					-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",					-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",						-- Weapon's Aiming Sound
-				"nanos-world::A_SMG_Shot",					-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Pistol",	-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",		-- Character's Aiming Animation
-				"nanos-world::SM_AP5_Mag_Empty",				-- Magazine Mesh
-				CrosshairType.Submachine
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_SubmachineGun_04")
+
+			weapon:SetAmmoSettings(32, 1000)
+			weapon:SetDamage(15)
+			weapon:SetSpread(35)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-5, 0, -13), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(-3, 0, 0), Rotator(0, 25, 157.5))
+			weapon:SetRightHandOffset(Vector(-25, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.SingleHandedWeapon)
+			weapon:SetCadence(0.075)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_9x18")
+
+			weapon:SetSoundDry("nanos-world::A_SMG_Dry")
+			weapon:SetSoundLoad("nanos-world::A_SMG_Load")
+			weapon:SetSoundUnload("nanos-world::A_SMG_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_SMG_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Pistol")
+
+			weapon:SetMagazineMesh("nanos-world::SM_AP5_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Submachine")
+
+			return weapon
 		end,
 
 		SubmachineGun_05 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_SubmachineGun_05",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				32,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				32,						-- Clip Capacity
-				15,						-- Base Damage
-				35,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				32,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.55,					-- Sight's FOV multiplier
-				Vector(-10, 0, -14),	-- Sight Location
-				Rotator(-1, 0, 0),	-- Sight Rotation
-				Vector(-3, 0, 0),		-- Left Hand Location
-				Rotator(0, 25, 157.5),	-- Left Hand Rotation
-				Vector(-25, 0, 0),		-- Right Hand Offset
-				HandlingMode.SingleHandedWeapon,
-				0.075,					-- Cadence (1 shot at each 0.15seconds)
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",				-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",			-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_9x18",			-- Shells Particle
-				"nanos-world::A_SMG_Dry",					-- Weapon's Dry Sound
-				"nanos-world::A_SMG_Load",					-- Weapon's Load Sound
-				"nanos-world::A_SMG_Unload",					-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",					-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",						-- Weapon's Aiming Sound
-				"nanos-world::A_SMG_Shot",					-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Pistol",	-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",		-- Character's Aiming Animation
-				"nanos-world::SM_AP5_Mag_Empty",				-- Magazine Mesh
-				CrosshairType.Submachine
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_SubmachineGun_05")
+
+			weapon:SetAmmoSettings(32, 1000)
+			weapon:SetDamage(15)
+			weapon:SetSpread(35)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-10, 0, -14), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(-3, 0, 0), Rotator(0, 25, 157.5))
+			weapon:SetRightHandOffset(Vector(-25, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.SingleHandedWeapon)
+			weapon:SetCadence(0.075)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_9x18")
+
+			weapon:SetSoundDry("nanos-world::A_SMG_Dry")
+			weapon:SetSoundLoad("nanos-world::A_SMG_Load")
+			weapon:SetSoundUnload("nanos-world::A_SMG_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_SMG_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Pistol")
+
+			weapon:SetMagazineMesh("nanos-world::SM_AP5_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Submachine")
+
+			return weapon
 		end,
 
 		Shotgun_01 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Shotgun_01",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				6,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				6,						-- Clip Capacity
-				30,						-- Base Damage
-				40,						-- Spread
-				6,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				1,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				10000,					-- Max Bullet Distance
-				15000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.75,					-- Sight's FOV multiplier
-				Vector(0, 0, -15),		-- Sight Location
-				Rotator(-1, 0, 0),		-- Sight Rotation
-				Vector(35, 0, 6),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-5, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.9,					-- Cadence
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_12Gauge",			-- Shells Particle
-				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
-				"",												-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
-				"nanos-world::A_Wesson500_Shot",					-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"",												-- Magazine Mesh
-				CrosshairType.Shotgun
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Shotgun_01")
+
+			weapon:SetAmmoSettings(6, 1000)
+			weapon:SetDamage(30)
+			weapon:SetSpread(40)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(6, 10000, 15000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(0, 0, -15), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(35, 0, 6), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-5, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.9)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_12Gauge")
+
+			weapon:SetSoundDry("nanos-world::A_Shotgun_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Shotgun_Load_Bullet")
+			weapon:SetSoundUnload("")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_Wesson500_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire_Heavy")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Shotgun")
+
+			weapon:SetMagazineMesh("")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Shotgun")
+
+			return weapon
 		end,
 
 		Shotgun_02 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Shotgun_02",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				6,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				6,						-- Clip Capacity
-				30,						-- Base Damage
-				40,						-- Spread
-				6,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				1,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				10000,					-- Max Bullet Distance
-				15000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.75,					-- Sight's FOV multiplier
-				Vector(0, 0, -14),	-- Sight Location
-				Rotator(-1, 0, 0),		-- Sight Rotation
-				Vector(35, 0, 6),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-5, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.9,					-- Cadence
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_12Gauge",			-- Shells Particle
-				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
-				"",												-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
-				"nanos-world::A_Wesson500_Shot",					-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"",												-- Magazine Mesh
-				CrosshairType.Shotgun
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Shotgun_02")
+
+			weapon:SetAmmoSettings(6, 1000)
+			weapon:SetDamage(30)
+			weapon:SetSpread(40)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(6, 10000, 15000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(0, 0, -14), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(35, 0, 6), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-5, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.9)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_12Gauge")
+
+			weapon:SetSoundDry("nanos-world::A_Shotgun_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Shotgun_Load_Bullet")
+			weapon:SetSoundUnload("")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_Wesson500_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire_Heavy")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Shotgun")
+
+			weapon:SetMagazineMesh("")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Shotgun")
+
+			return weapon
 		end,
 
 		Shotgun_03 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Shotgun_03",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				6,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				6,						-- Clip Capacity
-				20,						-- Base Damage
-				70,						-- Spread
-				6,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				1,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				10000,					-- Max Bullet Distance
-				15000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.75,					-- Sight's FOV multiplier
-				Vector(0, 0, -14),	-- Sight Location
-				Rotator(-1, 0, 0),		-- Sight Rotation
-				Vector(35, 0, 6),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-5, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.9,					-- Cadence
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_12Gauge",			-- Shells Particle
-				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
-				"",												-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
-				"nanos-world::A_Shotgun_Shot",					-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"",												-- Magazine Mesh
-				CrosshairType.Shotgun
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Shotgun_03")
+
+			weapon:SetAmmoSettings(6, 1000)
+			weapon:SetDamage(20)
+			weapon:SetSpread(70)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(6, 10000, 15000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(0, 0, -14), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(35, 0, 6), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-5, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.9)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_12Gauge")
+
+			weapon:SetSoundDry("nanos-world::A_Shotgun_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Shotgun_Load_Bullet")
+			weapon:SetSoundUnload("")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_Shotgun_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire_Heavy")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Shotgun")
+
+			weapon:SetMagazineMesh("")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Shotgun")
+
+			return weapon
 		end,
 
 		Shotgun_04 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Shotgun_04",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				6,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				6,						-- Clip Capacity
-				20,						-- Base Damage
-				40,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				1,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				10000,					-- Max Bullet Distance
-				15000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.75,					-- Sight's FOV multiplier
-				Vector(0, 0, -13),	-- Sight Location
-				Rotator(-1, 0, 0),		-- Sight Rotation
-				Vector(30, 0, 6),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-5, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.5,					-- Cadence
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_12Gauge",			-- Shells Particle
-				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
-				"",												-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
-				"nanos-world::A_Wesson500_Shot",					-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",	-- Character's Aiming Animation
-				"",												-- Magazine Mesh
-				CrosshairType.Crossbow 
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Shotgun_04")
+
+			weapon:SetAmmoSettings(6, 1000)
+			weapon:SetDamage(20)
+			weapon:SetSpread(40)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 10000, 15000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(0, 0, -13), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(30, 0, 6), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-5, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.5)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_12Gauge")
+
+			weapon:SetSoundDry("nanos-world::A_Shotgun_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Shotgun_Load_Bullet")
+			weapon:SetSoundUnload("")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_Wesson500_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Shotgun")
+
+			weapon:SetMagazineMesh("")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Crossbow ")
+
+			return weapon
 		end,
 
 		Shotgun_05 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Shotgun_05",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				6,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				6,						-- Clip Capacity
-				20,						-- Base Damage
-				80,						-- Spread
-				6,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				1,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				10000,					-- Max Bullet Distance
-				15000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.75,					-- Sight's FOV multiplier
-				Vector(0, 0, -14.5),	-- Sight Location
-				Rotator(-1, 0, 0),		-- Sight Rotation
-				Vector(35, 0, 6),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-5, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.9,					-- Cadence
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_12Gauge",			-- Shells Particle
-				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
-				"",												-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
-				"nanos-world::A_Shotgun_Shot",					-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"",												-- Magazine Mesh
-				CrosshairType.Shotgun
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Shotgun_05")
+
+			weapon:SetAmmoSettings(6, 1000)
+			weapon:SetDamage(20)
+			weapon:SetSpread(80)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(6, 10000, 15000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(0, 0, -14.5), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(35, 0, 6), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-5, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.9)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_12Gauge")
+
+			weapon:SetSoundDry("nanos-world::A_Shotgun_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Shotgun_Load_Bullet")
+			weapon:SetSoundUnload("")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_Shotgun_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire_Heavy")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Shotgun")
+
+			weapon:SetMagazineMesh("")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Shotgun")
+
+			return weapon
 		end,
 
 		Shotgun_SawedOff = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_Shotgun_SawedOff",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				2,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				2,						-- Clip Capacity
-				20,						-- Base Damage
-				80,						-- Spread
-				6,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				1,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				10000,					-- Max Bullet Distance
-				15000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.75,					-- Sight's FOV multiplier
-				Vector(0, 0, -14),	-- Sight Location
-				Rotator(-1, 0, 0),		-- Sight Rotation
-				Vector(15, 0, 4),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-15, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.1,					-- Cadence
-				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",					-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",				-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_12Gauge",			-- Shells Particle
-				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
-				"",												-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",						-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",							-- Weapon's Aiming Sound
-				"nanos-world::A_12Gauge_Shot",					-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"",												-- Magazine Mesh
-				CrosshairType.Shotgun
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_Shotgun_SawedOff")
+
+			weapon:SetAmmoSettings(2, 1000)
+			weapon:SetDamage(20)
+			weapon:SetSpread(80)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(6, 10000, 15000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(0, 0, -14), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(15, 0, 4), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-15, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.1)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_12Gauge")
+
+			weapon:SetSoundDry("nanos-world::A_Shotgun_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Shotgun_Load_Bullet")
+			weapon:SetSoundUnload("")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_12Gauge_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire_Heavy")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Shotgun")
+
+			weapon:SetMagazineMesh("")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Shotgun")
+
+			return weapon
 		end,
 
 		SniperRifle_01 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_SniperRifle_01",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				5,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				5,						-- Clip Capacity
-				90,						-- Base Damage
-				15,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				5,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.25,					-- Sight's FOV multiplier
-				Vector(-5, 0, -16),		-- Sight Location
-				Rotator(-1, 0, 0),		-- Sight Rotation
-				Vector(25, 0, 6),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-15, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				2,						-- Cadence (1 shot at each 0.15seconds)
-				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
-				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
-				"",							-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
-				"nanos-world::A_SniperRifle_Shot",								-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"",						-- Magazine Mesh
-				CrosshairType.None
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_SniperRifle_01")
+
+			weapon:SetAmmoSettings(5, 1000)
+			weapon:SetDamage(90)
+			weapon:SetSpread(15)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-5, 0, -16), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(25, 0, 6), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-15, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(2)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_762x39")
+
+			weapon:SetSoundDry("nanos-world::A_Shotgun_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Shotgun_Load_Bullet")
+			weapon:SetSoundUnload("")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_SniperRifle_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire_Heavy")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Shotgun")
+
+			weapon:SetMagazineMesh("")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_None")
+
+			return weapon
 		end,
 
 		SniperRifle_02 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_SniperRifle_02",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				5,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				5,						-- Clip Capacity
-				100,						-- Base Damage
-				15,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				5,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.25,					-- Sight's FOV multiplier
-				Vector(-5, 0, -14.5),		-- Sight Location
-				Rotator(-1, 0, 0),		-- Sight Rotation
-				Vector(25, 0, 6),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-25, 0, 5),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				2,						-- Cadence (1 shot at each 0.15seconds)
-				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
-				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
-				"",							-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
-				"nanos-world::A_SniperRifle_Shot",								-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"",						-- Magazine Mesh
-				CrosshairType.None
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_SniperRifle_02")
+
+			weapon:SetAmmoSettings(5, 1000)
+			weapon:SetDamage(100)
+			weapon:SetSpread(15)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-5, 0, -14.5), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(25, 0, 6), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-25, 0, 5))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(2)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_762x39")
+
+			weapon:SetSoundDry("nanos-world::A_Shotgun_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Shotgun_Load_Bullet")
+			weapon:SetSoundUnload("")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_SniperRifle_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire_Heavy")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Shotgun")
+
+			weapon:SetMagazineMesh("")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_None")
+
+			return weapon
 		end,
 
 		SniperRifle_03 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_SniperRifle_03",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				5,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				5,						-- Clip Capacity
-				90,						-- Base Damage
-				15,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				5,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.25,					-- Sight's FOV multiplier
-				Vector(-5, 0, -16),		-- Sight Location
-				Rotator(-1, 0, 0),		-- Sight Rotation
-				Vector(25, 0, 6),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-15, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				2,						-- Cadence (1 shot at each 0.15seconds)
-				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
-				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
-				"",							-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
-				"nanos-world::A_SniperRifle_Shot",								-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"",						-- Magazine Mesh
-				CrosshairType.None
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_SniperRifle_03")
+
+			weapon:SetAmmoSettings(5, 1000)
+			weapon:SetDamage(90)
+			weapon:SetSpread(15)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-5, 0, -16), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(25, 0, 6), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-15, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(2)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_762x39")
+
+			weapon:SetSoundDry("nanos-world::A_Shotgun_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Shotgun_Load_Bullet")
+			weapon:SetSoundUnload("")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_SniperRifle_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire_Heavy")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Shotgun")
+
+			weapon:SetMagazineMesh("")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_None")
+
+			return weapon
 		end,
 
 		SniperRifle_04 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_SniperRifle_04",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				5,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				5,						-- Clip Capacity
-				90,						-- Base Damage
-				15,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				5,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.25,					-- Sight's FOV multiplier
-				Vector(-5, 0, -15),		-- Sight Location
-				Rotator(-1, 0, 0),		-- Sight Rotation
-				Vector(25, 0, 4),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-15, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				2,						-- Cadence (1 shot at each 0.15seconds)
-				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
-				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
-				"",							-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
-				"nanos-world::A_SniperRifle_Shot",								-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"",						-- Magazine Mesh
-				CrosshairType.None
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_SniperRifle_04")
+
+			weapon:SetAmmoSettings(5, 1000)
+			weapon:SetDamage(90)
+			weapon:SetSpread(15)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-5, 0, -15), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(25, 0, 4), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-15, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(2)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_762x39")
+
+			weapon:SetSoundDry("nanos-world::A_Shotgun_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Shotgun_Load_Bullet")
+			weapon:SetSoundUnload("")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_SniperRifle_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire_Heavy")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Shotgun")
+
+			weapon:SetMagazineMesh("")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_None")
+
+			return weapon
 		end,
 
 		SniperRifle_05 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_SniperRifle_05",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				5,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				5,						-- Clip Capacity
-				90,						-- Base Damage
-				15,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				5,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.25,					-- Sight's FOV multiplier
-				Vector(-5, 0, -16.5),		-- Sight Location
-				Rotator(-1, 0, 0),		-- Sight Rotation
-				Vector(20, 0, 6),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-15, 0, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				2,						-- Cadence (1 shot at each 0.15seconds)
-				false,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
-				"nanos-world::A_Shotgun_Dry",					-- Weapon's Dry Sound
-				"nanos-world::A_Shotgun_Load_Bullet",			-- Weapon's Load Sound
-				"",							-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
-				"nanos-world::A_SniperRifle_Shot",								-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Shotgun",		-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire_Heavy",	-- Character's Aiming Animation
-				"",						-- Magazine Mesh
-				CrosshairType.None
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_SniperRifle_05")
+
+			weapon:SetAmmoSettings(5, 1000)
+			weapon:SetDamage(90)
+			weapon:SetSpread(15)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-5, 0, -16.5), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(20, 0, 6), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-15, 0, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(2)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_762x39")
+
+			weapon:SetSoundDry("nanos-world::A_Shotgun_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Shotgun_Load_Bullet")
+			weapon:SetSoundUnload("")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_SniperRifle_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire_Heavy")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Shotgun")
+
+			weapon:SetMagazineMesh("")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_None")
+
+			return weapon
 		end,
 
 		P90 = function(location, rotation)
-			return Weapon(
-				location or Vector(),
-				rotation or Rotator(),
-				"quaternius::SK_P90",	-- Model
-				0,						-- Collision (Normal)
-				true,					-- Gravity Enabled
-				50,						-- Ammo in the Clip
-				1000,					-- Ammo in the Bag
-				50,						-- Clip Capacity
-				10,						-- Base Damage
-				40,						-- Spread
-				1,						-- Bullet Count (1 for common weapons, > 1 for shotguns)
-				50,						-- Ammo to Reload (Ammo Clip for common weapons, 1 for shotguns)
-				20000,					-- Max Bullet Distance
-				20000,					-- Bullet Speed (visual only)
-				Color(100, 58, 0),		-- Bullet Color
-				0.5,					-- Sight's FOV multiplier
-				Vector(-5, 0, -22),	-- Sight Location
-				Rotator(-1, 0, 0),		-- Sight Rotation
-				Vector(25, 0, 0),		-- Left Hand Location
-				Rotator(0, 60, 90),		-- Left Hand Rotation
-				Vector(-15, -5, 0),		-- Right Hand Offset
-				HandlingMode.DoubleHandedWeapon,
-				0.05,					-- Cadence (1 shot at each 0.15seconds)
-				true,					-- Can Hold Use (keep pressing to keep firing, common to automatic weapons)
-				false,					-- Need to release to Fire (common to Bows)
-				"nanos-world::P_Bullet_Trail",							-- Bullet Trail Particle
-				"nanos-world::P_Weapon_BarrelSmoke",						-- Barrel Particle
-				"nanos-world::P_Weapon_Shells_762x39",					-- Shells Particle
-				"nanos-world::A_Rifle_Dry",								-- Weapon's Dry Sound
-				"nanos-world::A_Rifle_Load",								-- Weapon's Load Sound
-				"nanos-world::A_Rifle_Unload",							-- Weapon's Unload Sound
-				"nanos-world::A_AimZoom",								-- Weapon's Zooming Sound
-				"nanos-world::A_Rattle",									-- Weapon's Aiming Sound
-				"nanos-world::A_P226_Shot",								-- Weapon's Shot Sound
-				"nanos-world::AM_Mannequin_Reload_Rifle",				-- Character's Reloading Animation
-				"nanos-world::AM_Mannequin_Sight_Fire",					-- Character's Aiming Animation
-				"nanos-world::SM_AK47_Mag_Empty",						-- Magazine Mesh
-				CrosshairType.Submachine
-			)
+			local weapon = Weapon(location or Vector(), rotation or Rotator(), "quaternius::SK_P90")
+
+			weapon:SetAmmoSettings(50, 1000)
+			weapon:SetDamage(10)
+			weapon:SetSpread(40)
+			weapon:SetRecoil(0.25)
+			weapon:SetBulletSettings(1, 20000, 20000, Color(100, 58, 0))
+			weapon:SetSightTransform(Vector(-5, 0, -22), Rotator(-1, 0, 0))
+			weapon:SetLeftHandTransform(Vector(25, 0, 0), Rotator(0, 60, 90))
+			weapon:SetRightHandOffset(Vector(-15, -5, 0))
+			weapon:SetHandlingMode(HandlingMode.DoubleHandedWeapon)
+			weapon:SetCadence(0.05)
+			weapon:SetWallbangSettings(50, 0.75)
+
+			weapon:SetParticlesBulletTrail("nanos-world::P_Bullet_Trail")
+			weapon:SetParticlesBarrel("nanos-world::P_Weapon_BarrelSmoke")
+			weapon:SetParticlesShells("nanos-world::P_Weapon_Shells_762x39")
+
+			weapon:SetSoundDry("nanos-world::A_Rifle_Dry")
+			weapon:SetSoundLoad("nanos-world::A_Rifle_Load")
+			weapon:SetSoundUnload("nanos-world::A_Rifle_Unload")
+			weapon:SetSoundZooming("nanos-world::A_AimZoom")
+			weapon:SetSoundAim("nanos-world::A_Rattle")
+			weapon:SetSoundFire("nanos-world::A_P226_Shot")
+
+			weapon:SetAnimationCharacterFire("nanos-world::AM_Mannequin_Sight_Fire")
+			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Rifle")
+
+			weapon:SetMagazineMesh("nanos-world::SM_AK47_Mag_Empty")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Submachine")
+
+			return weapon
 		end,
 	}
 }
