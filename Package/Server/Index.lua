@@ -1116,7 +1116,7 @@ Quaternius = {
 			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Shotgun")
 
 			weapon:SetMagazineMesh("")
-			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Crossbow ")
+			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_Crossbow")
 
 			return weapon
 		end,
@@ -1221,7 +1221,6 @@ Quaternius = {
 			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Shotgun")
 
 			weapon:SetMagazineMesh("")
-			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_None")
 
 			return weapon
 		end,
@@ -1256,7 +1255,6 @@ Quaternius = {
 			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Shotgun")
 
 			weapon:SetMagazineMesh("")
-			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_None")
 
 			return weapon
 		end,
@@ -1291,7 +1289,6 @@ Quaternius = {
 			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Shotgun")
 
 			weapon:SetMagazineMesh("")
-			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_None")
 
 			return weapon
 		end,
@@ -1326,7 +1323,6 @@ Quaternius = {
 			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Shotgun")
 
 			weapon:SetMagazineMesh("")
-			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_None")
 
 			return weapon
 		end,
@@ -1361,7 +1357,6 @@ Quaternius = {
 			weapon:SetAnimationReload("nanos-world::AM_Mannequin_Reload_Shotgun")
 
 			weapon:SetMagazineMesh("")
-			weapon:SetCrosshairMaterial("nanos-world::MI_Crosshair_None")
 
 			return weapon
 		end,
